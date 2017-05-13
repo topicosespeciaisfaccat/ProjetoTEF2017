@@ -1,0 +1,49 @@
+topicosespeciaisfaccat@gmail.com
+tef@2017
+
+-----------------------------------------------------------------------------------------------
+https://git-scm.com/book/pt-br/v1/Primeiros-passos-Obtendo-Ajuda
+
+
+----------------------- autenticação ----------------------------------------------------------
+https://github.com/topicosespeciaisfaccat
+
+Usuario : topicosespeciaisfaccat
+senha : tef@2017
+
+git init
+git add *
+git commit -m "Meu primeiro commit"
+git remote add origin https://github.com/topicosespeciaisfaccat/ProjetoTEF2017.git
+git push -u origin master
+
+
+----------------Verificando Suas Configurações-----------------------------------------------
+
+git config --global --list
+
+Caso você queira verificar suas configurações, você pode utilizar o comando git config --list para listar todas as configurações que o Git encontrar naquele momento:
+
+-------------------------------------------------------------------
+
+git config --global --unset-all gui.recentrepo
+
+--------------Sua Identidade ---------------------------------------
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+git config user.name
+
+Relembrando, você só precisará fazer isso uma vez caso passe a opção --global, pois o Git sempre usará essa informação para qualquer coisa que você faça nesse sistema. Caso você queira sobrepor estas com um nome ou endereço de e-mail diferentes para projetos específicos, você pode executar o comando sem a opção --global quando estiver no próprio projeto.
+
+--------------------------------------
+
+c9.io
+
+usario : topicosespeciaisfaccat
+senha : tef@2017
+
+
+cla.cgw@gmail.com
+tef@2017

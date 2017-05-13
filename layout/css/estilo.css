@@ -1,0 +1,618 @@
+/*----------------------------------------------------------
+	Theme: "Como Criar um Site Responsivo com HTML5 e CSS3"
+	Date: maio/2014
+	Description: Tutorial básico mostrando como criar um site
+	responsivo com HTML5 e CSS3
+	Keywords: responsive design, site responsivo, html5, css3
+	Version: 1.0
+	Update: maio/2014
+	Author: CarlosHPS Webdesigner
+	Author URL: http://www.carloshps.com.br
+	Author Portfolio: http://www.carloshps.com.br
+-----------------------------------------------------------*/
+/*----------------------------------------------------------
+CSS Reset - Normalize.css
+----------------------------------------------------------*/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/*----------------------------------------------------------
+Configurações Gerais <<<<<==================================
+----------------------------------------------------------*/
+body{
+	background:url(../imagens/background.jpg); 
+	color:#868686; 
+	font-family: "Open Sans", Helvetica, sans-serif, arial; 
+	font-size: 15	px; /* 18px ÷ 16px = 1.125em */
+	font-weight: 300;
+	line-height: 1.2222222222em; /* 22px ÷ 18px = 1.22222222222em*/
+	text-align: left; 
+	text-shadow:1px 1px 0px #fff; 
+}
+.center{
+	margin: 0 auto;
+	max-width:1200px; /*largura máxima do layout*/
+	width: 90%; /*ajuste do layout à tela*/
+}
+/*.clearfix usado para adicionar um espaço vazio antes e depois dos elementos
+  evitando que os floats se aglomerem.
+*/
+.clearfix:before, .clearfix:after {
+    content: " "; 
+    display: table; 
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/*fim do clearfix*/
+img, picture, video, embed {
+    max-width: 100%; /*define a largura máxima em até 100%*/
+}
+h1, h2{
+	color:#FE9380;
+	font-size: 3.3333333333em; /* 60px ÷ 18px = 3.3333333333em */
+	font-weight: 800;
+	letter-spacing: -0.05em; /* -3px ÷ 60px = -0.05em */
+	line-height: 1em; /* 60px ÷ 60px = 1em */
+}
+h3{
+	font-size: 1.7777777778em; /* 32px ÷ 18px = 1.7777777778em */
+	font-weight: 300;
+	letter-spacing: -0.0625em; /* -2px ÷ 32px = -0.0625em */
+	line-height: 1.1875em; /* 38px ÷ 32px = 1.1875em */
+}
+p{
+	font-weight: 300;
+	letter-spacing: -0.05555555556em; /* -1px ÷ 18px = -0.05555555556em */
+}
+a, a:link, a:visited{
+	color:#FE9380; 
+	font-weight:400; 
+	text-decoration:none;
+}
+a:hover{
+	color:#FE5E41;
+	text-decoration:underline;
+	text-shadow:none; 
+}
+/*----------------------------------------------------------
+Seção HEADER - Topo do Site <<<<<===========================
+----------------------------------------------------------*/
+header{
+	border-bottom: 1px solid #E0E0E0; 
+	height:150px;
+	width:100%; /*1200px ÷ 1200px = 1 x 100 = 100%*/
+}
+/*
+=========================
+logotipo
+=========================
+*/
+	header h1 a{
+		background:url(../imagens/logo-criar-site-responsivo.png) no-repeat ; 
+		display:block; 
+		float:left; 
+		height:139px;
+		text-indent:-9999; 
+		width:58.333333333333%; /* 700px ÷ 1200px = 0.58333333333333 x 100 = 58.333333333333%*/
+	}
+/*
+=========================
+nav - menu de navegação
+=========================
+*/
+nav{
+	float:right;
+	margin-top:78px; 
+	text-align:right; 
+	width:41.6666666666667%; /* 500px ÷ 1200px = 0.416666666666667 x 100 = 41.6666666666667%*/
+}
+	nav ul{
+		list-style-type:none; 
+	}
+		nav li {
+			display: inline; 
+		}
+			nav ul li a{
+				margin-right: 2.5%; /* 30px ÷ 1200px = 0.025 x 100 = 2.5%*/
+			}
+			nav a:link, nav a:visited{
+				color:#999;
+				font-size: 1.2222222222em; /* 22px ÷ 18px = 1.2222222222em */
+				font-weight: 300;
+				letter-spacing: -0.0909090909em; /* -2px ÷ 22px = -0.0909090909em */
+				line-height: 1.18181818182em; /* 26px ÷ 22px = 1.18181818182em */
+				display:inline-block;
+			}
+			nav a.ativo:link, nav a:hover{
+				color:#FE9380; 
+			}
+
+
+
+/*----------------------------------------------------------
+Seção .CHAMADA <<<<<========================================
+----------------------------------------------------------*/
+.chamada{
+	height:290px;
+	text-align:center;
+	width:100%; /*1200px ÷ 1200px = 1 x 100 = 100%*/
+}
+	h2 span{
+		font-size: 1em; /* 60px ÷ 60px = 1em */
+		font-weight: 300;
+		letter-spacing: -0.0333333333em; /* -2px ÷ 60px = 0.0333333333em */
+		line-height: 1em; /* 60px ÷ 60px = 1em */
+	}
+	.chamada h3 {
+		margin: 0 auto;
+		width:75%; /* 900px ÷ 1200px = 0.75 x 100 = 75%*/
+	}
+
+
+
+
+	input {
+		font-size: 1em; /* 60px ÷ 60px = 1em */
+		font-weight: 300;
+		letter-spacing: -0.0333333333em; /* -2px ÷ 60px = 0.0333333333em */
+		line-height: 1em; /* 60px ÷ 60px = 1em */  	
+    	border-radius: 3px;
+    	background-color:#FE9481;    	
+  		-moz-border-radius: 3px;
+  		-webkit-border-radius: 3px;
+  		-webkit-appearance: none;
+}
+
+.wrapper {
+  height: 100%;
+  min-height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.wrapper div {
+  
+}
+
+/*----------------------------------------------------------
+Seção .CONTAINER - Conteúdo com 3 colunas <<<<<=============
+----------------------------------------------------------*/
+.container{
+	background-color:#FE9481;
+	height: 417px;
+	padding:2.5%; /* 30px ÷ 1200px = 0.025 x 100 = 2.5%*/
+	width:95%; /* 1200px ÷ 1200px = 1 x 100 = 100% .:. 100% - 5.0% de padding (direita e esquerda) = 95%*/
+}
+/*Por causa do padding, a largura, width, do .container passou de 1.200px para 1.140px (95%)*/
+.desktop, .tablet, .mobile{
+	float:left;
+	position:relative;
+	text-align:center;
+	width:31.57894736842105%; /* 360px ÷ 1140px = 0.3157894736842105 x 100 = 31.57894736842105%*/
+}
+.desktop, .tablet{
+	margin-right: 2.631578947368421%; /* 30px ÷ 1140px =  0.02631578947368421 x 100 = 2.631578947368421%*/
+}
+.mobile{
+	background-color:#9C8CB9;
+	margin-right:0px;
+}
+.desktop{
+	background-color:#FE9481;
+}
+.tablet{
+	background-color:#FCDA92;
+	margin-right: 2.631578947368421%;
+
+}
+
+/*
+=========================
+figure - imagens
+=========================
+*/
+.container .desktop figure, .container .tablet figure, .container .mobile figure {
+	margin: 15px auto 0px auto; 
+	width:69.44444444444444%; /* 250px ÷ 360px = 0.6944444444444 x 100 = 69.44444444444444%*/
+}
+/*
+=========================
+formatação do texto
+=========================
+*/
+.container h3{
+	color:#fff;
+	font-size: 1.77777777778em; /* 32px ÷ 18px = 1.77777777778em */
+	font-weight: 300;
+	letter-spacing: -0.0625em; /* -2px ÷ 32px = 0.0625em */
+	margin-bottom: 30px;
+	text-shadow:none;
+}
+.container p{
+	background-color:#fff;
+	float:left;
+	height:160px;
+	padding: 1.9444444444444445%; /* 7px ÷ 360px =  0.019444444444444445 x 100 =  1.9444444444444445%*/
+	position:absolute;
+	width-max:100%; /* 360px ÷ 360px = 1 x 100 = 100%*/
+	text-align:justify;
+	top:225px;
+}
+/*
+=========================
+formatação do botão
+=========================
+*/
+span.btn{
+	font-size: 1.1111111111em; /* 20px ÷ 18px = 1.1111111111em */
+	font-weight: 400;
+	letter-spacing: -0.1em; /* -2px ÷ 20px = -0.1em */
+	height:27px;
+	margin-top: 30px;
+	position:absolute;
+	right: 1px;
+	text-align:center;
+	text-shadow:none;
+	width:33.33333333333333%; /* 120px ÷ 360px = 0.3333333333333333 x 100 = 33.33333333333333%*/
+}
+span.btn a{
+	color:#fff;
+	padding: 2px 3.333333333333333%; /* 4px ÷ 120px = 0.3333333333333333 x 100 = 3.333333333333333%*/
+}
+.desktop span.btn a{
+	background-color:#FE9481;
+}
+.tablet span.btn a{
+	background-color:#FCDA92;
+}
+.mobile span.btn a{
+	background-color:#9C8CB9;
+}
+/*----------------------------------------------------------
+Seção FOOTER - Rodape com 2 colunas <<<<<===================
+----------------------------------------------------------*/
+footer{
+	clear:both;
+	height: 50px;
+	padding: 10px 0;
+	width:100%; /* 1200px ÷ 1200px = 1 x 100 = 100%*/
+}
+.copyright{
+	float:left;
+	margin-left: 2.5%; /* 30px ÷ 1200px = 0.025 x 100 = 2.5%*/
+}
+.desenvolvedor{
+	float:right;
+}
+.desenvolvedor figure{
+	width:100%;
+}
+/*----------------------------------------------------------
+Media Queries <<<<<=========================================
+----------------------------------------------------------*/
+
+/* 
+1200px – Desktops, notebooks com monitores widescreen
+***********************************************************/
+@media screen and (max-width: 1200px){
+	.chamada h3 {
+		font-size: 1.66666666667em; /* 30px ÷ 18px */
+	}
+	.container h3{
+		font-size: 1.55555555556em; /*  28px ÷ 18px */
+	}
+	.container p{
+		height: 170px;
+		top:217px;
+	}
+}
+/* 
+960px – Tablets no formato paisagem e alguns monitores mais antigos
+***********************************************************/
+@media screen and (max-width:960px){
+	header h1 a{
+		width:37.5%; /* 360px ÷ 960px */
+	}
+	nav{
+		width:62.5%; /* 600px ÷ 960px */
+	}
+	h2{
+		font-size:2.6666666667em; /*48px ÷ 18px*/
+	}
+/*.chamada*/
+	.chamada {
+		height: 250px;
+	}
+		.chamada h3{
+			font-size:1.5em; /*27px ÷ 18px*/
+			width:88.54166666666667%; /*850px ÷ 960px*/
+		}
+/*.container*/
+	.container{
+		height: 425px;
+		padding:3.125%; /* 30px ÷ 960px */
+		width:93.75%; /* 100% (960px) - 6.25% de padding (direita e esquerda) = 92.1875%*/
+	}
+		.desktop, .tablet, .mobile{
+			width:31.45833333333333%; /* 302px ÷ 960px */
+		}
+		.container .desktop figure, .container .tablet figure, .container .mobile figure {
+			width:66.22516556291391%; /* 200px ÷ 302px %*/
+		}
+			.container img{
+					height:100px;
+				}
+		.container h3{
+			font-size: 1.6666666667em; /*30px ÷ 18px*/
+		}
+		.container p{
+			font-size: 0.8333333333em; /*15px ÷ 18px*/
+			top: 230px;
+		}
+}
+/* 
+768px – Tablets no formato retrato, como o iPad
+***********************************************************/
+@media screen and (max-width:768px){
+/*cores dos links e H2*/
+	h2, a, a:link, a:visited{
+	color:#FBCA61; 
+}
+	a:hover{
+		color:#F9AD0F;
+}
+/*header*/	
+	header {
+		height:195px;
+		text-align:center;
+	}
+		header h1 a{
+			background-position: 57% 0;
+			height: 126px;
+			margin-bottom: 15px;
+			width: 100%;
+		}
+		nav{
+			float:none;
+			text-align:center;
+			width: 100%;
+		}
+			nav a.ativo:link, nav a:hover{
+				color:#FBCA61; 
+			}
+/*.chamada*/
+	.chamada{
+		height:200px;
+	}
+		h2 {
+			font-size: 2.2222222222em; /*40px ÷ 18px*/
+		}
+		.chamada h3{
+			font-size:1.1111111111em; /*20px ÷ 18px*/
+		}
+/*.container*/
+	.container{
+		background-color:#FCDA92;
+		height: 380px;
+		padding:3.90625%; /* 30px ÷ 768px = 0.025 x 100 = 2.5%*/
+		width:92.1875%; /* 100% (768px) - 7.8125% de padding (direita e esquerda) = 92.1875%*/
+	}
+		.desktop, .tablet, .mobile{
+			width:31.25%; /* 240px ÷ 768px */
+		}
+		.container .desktop figure, .container .tablet figure, .container .mobile figure {
+			width:62.25%; /* 150px ÷ 240px %*/
+		}
+			.container img{
+					height:80px;
+				}
+		.container h3{
+			font-size: 1.6666666667em; /*30px ÷ 18px*/
+		}
+		.container p{
+			font-size: 0.7777777778em; /*14px ÷ 18px*/
+			height:140px;
+			line-height: 1.1428571428em; /*16px ÷ 14px*/
+			padding: 2.9166666667%; /* 7px ÷ 240px */
+			top: 215px;
+		}
+			span.btn{
+				font-size: 1.1111111111em; /* 20px ÷ 18px = 1.1111111111em */
+				letter-spacing: -0.1em; /* -2px ÷ 20px = -0.1em */
+				height:22px;
+				margin-top: 20px;
+				position:absolute;
+				width:50%;
+			}
+			span.btn a{
+				padding: 2px 3.333333333333333%; /* 4px ÷ 120px */
+			}
+}
+/* 
+480px – Smartphones no formato paisagem com tela pequena
+***********************************************************/
+@media screen and (max-width:480px){
+/*Geral*/
+*{
+	margin:0;
+	padding:0;
+}
+.center{
+	width:100%;
+}
+/*cores dos links e H2*/
+h2, a, a:link, a:visited{
+	color:#9C8CB9; 
+}
+a:hover{
+		color:#745F9A;
+}
+/*header*/	
+header {
+	border-bottom: none;
+	height:auto;
+	text-align:center;
+}
+	header h1 a{
+		background-position: 50% 0;
+		display:inherit;
+		height: 126px;
+		width: 100%;
+	}
+/*menu nav*/
+nav{
+	clear:both;
+}
+	nav li {
+		background-color: #9C8CB9;
+		display:block;
+	}
+		nav ul li a{
+			height: 40px;
+			margin: 0 auto;
+			padding-top:3px;
+			text-align:center;
+			text-shadow:none;
+			width: 100%;
+		}
+		nav li a:link{
+			color:#fff;
+			font-size:1.3888888889em; /*25px ÷ 18px*/
+		}
+		nav li a.ativo:link, nav li a:hover, nav li a:visited {
+			background-color:#745F9A; 
+			color:#fff;
+			text-decoration:none;
+		}
+		nav li a.ativo:hover, nav li a.ativo:visited{
+			 background-color: #9C8CB9;
+		}
+/*.chamada*/
+.chamada{
+	height:130px;
+	margin-top:25px;
+}
+	h2 {
+		font-size: 1.4444444444em; /*26px ÷ 18px*/
+		letter-spacing:-0.0769230769230769em; /*2px ÷ 26px*/
+		margin-bottom: 15px;
+	}
+	.chamada h3{
+		font-size:0.7777777778em; /*14px ÷ 18px*/
+	}
+/*.container*/
+.container{	
+	background-color:#9C8CB9;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+	.container .desktop, .container .tablet, .container .mobile{
+		float:none;
+		height:160px;
+		width:100%;
+	}
+	.container .desktop figure, .container .tablet figure, .container .mobile figure{
+		float:left;
+		height:160px;
+		margin:0;
+		padding:0;
+		width: 53.125%; /*255px ÷ 480px*/
+	}
+	.container h3{
+		float:left;
+		margin-top: 40px;
+		width: 46.875%; /*225px ÷ 480px*/
+	}	
+		.container .desktop figure img, .container .tablet figure img, .container .mobile figure img{
+			height:125px;
+			margin-top:15px;
+			width:86.2745098040%; /*220px ÷ 255px*/
+		}
+	.container p{
+		display:none; /*oculta o parágrafo*/
+	}
+/*footer*/
+	.copyright, .desenvolvedor{
+		float:none;
+		margin: 0;
+		padding: 0;
+		text-align:center;
+	}
+	.desenvolvedor figure{
+		width:inherit;
+	}
+}
+/* 
+320px – Smartphones no formato retrato com tela pequena
+***********************************************************/
+@media screen and (max-width:320px){
+/*cores dos links e H2*/
+h2, a, a:link, a:visited{
+	color:#79E1D5; 
+}
+a:hover{
+		color:#2FD0BC;
+}
+/*menu nav*/
+	nav li {
+		background-color: #79E1D5;
+	}
+		nav li a:link{
+		color:#555;
+		}
+		nav li a.ativo:link, nav li a:hover, nav li a:visited {
+			background-color:#2FD0BC; 
+			color:#fff;
+		}
+		nav li a.ativo:hover, nav li a.ativo:visited{
+			 background-color: #2FD0BC;
+		}
+/*.chamada*/
+.chamada{
+	height:130px;
+	margin-top:20px;
+}
+	h2 {
+		font-size: 1.1111111111em; /*20px ÷ 18px*/
+		margin-bottom: 15px;
+	}
+	.chamada h3{
+		font-size:0.7777777778em; /*14px ÷ 18px*/
+	}
+/*.container*/
+	.container .desktop, .container .tablet, .container .mobile{
+		float:none;
+		height:160px;
+		width:100%;
+	}
+	.container .desktop figure, .container .tablet figure, .container .mobile figure{
+		float:left;
+		width: 100%;
+	}
+	.container h3{
+		display:none;
+	}	
+	.container p{
+		display:none; /*oculta o parágrafo*/
+	}
+}
+
+.inner-dash{
+	background-color:#00aaaa;
+	float:left;
+	margin-bottom: 10px;
+	margin-left:4%;
+	padding:20px;
+	width:17%;
+	height:30%;
+	text-align:center;
+	color:#ffffff;
+	text-shadow:none;
+}
