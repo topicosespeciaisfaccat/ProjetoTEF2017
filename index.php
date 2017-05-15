@@ -16,10 +16,10 @@ foreach ($ipsBloqueados as $key) {
 
 //vamos conectar com o banco de dados
 //hot, username, pass, dbname
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "projetoTEF2017";
+$db_host = "br-cdbr-azure-south-b.cloudapp.net";
+$db_user = "b92b3058bbebc1";
+$db_pass = "f582640e";
+$db_name = "meuazuresql";
 
 //vamos receber uma variavel chamada r que significa rota
 //$r = "login";
