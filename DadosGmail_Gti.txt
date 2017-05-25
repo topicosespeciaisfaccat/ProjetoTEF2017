@@ -28,9 +28,3 @@ Relembrando, você só precisará fazer isso uma vez caso passe a opção --glob
 
 c9.io
 
-usario : topicosespeciaisfaccat
-senha : tef@2017
-
-
-cla.cgw@gmail.com
-tef@2017
