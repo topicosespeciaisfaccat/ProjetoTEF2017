@@ -31,3 +31,5 @@ if (isset($_GET['r'])) {
 	$r = "login";
 	require_once $r . "/index.php";
 }
+
+

@@ -1,7 +1,7 @@
 <?php
 
 function _listaUsuario($conexao) {
-	$sql = "SELECT cpf, email, nome, descricao  tipo
+	$sql = "SELECT cpf, email, nome, descricao, tipo
 	          from usuario
 	         join tipoUsuario on usuario.tipoUsuario = tipoUsuario.id
 	          order by nome";
