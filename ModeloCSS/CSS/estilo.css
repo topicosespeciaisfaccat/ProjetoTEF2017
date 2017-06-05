@@ -1,0 +1,219 @@
+/* css principal*/
+body{
+    position: relative;
+    display: block;
+    background:url(../imagens/background.jpg);
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    width: 100%;
+    min-height: 100%;
+    color: black;
+}
+.principla{
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+}
+
+.headernav{
+    background-color: #0a6332;
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 54px;
+    margin:0;
+}
+
+.cabecalho{
+    width: 70%;
+    float: left;
+    display: block;
+}
+.menu{
+    width: 30%;
+    float: right;
+}
+.conteudo{
+    clear: both;
+    position: relative;
+    width: 100%;
+    display: block;
+    border: none;
+    margin:0px;
+
+}
+.menuadmin{
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rodape{
+    clear: both;
+    margin-top: 20px;
+    width: 100%;
+    position:fixed;
+    bottom:0; 
+
+}
+
+/*cabeçalho*/
+/*logo*/
+header{
+    width: 100%;
+}
+.icones{
+    position: relative;
+    height: 54px;
+    width: 100%;
+    display: table;
+
+}
+.logoheader{
+    width: 150px;
+    position: relative;
+    float: left;
+}
+.textoheader{
+    width: 40%;
+    position: relative;
+    float: left;
+    height: 54px;
+}
+.textoheader h1{
+    
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+
+.icones img{
+    height: 52px;
+}
+
+/*menu*/
+nav{
+    position: relative;
+    display: block;
+    float: right;
+    height: 54px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 100%;
+
+}
+
+li {
+    float: left;
+    
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    
+}
+
+li a:hover:not(.active) {
+    background-color: #4CAF50;
+}
+
+/*corpo*/
+.home{
+    margin: 10px;
+}
+/*rodapé*/
+footer{
+    background-color:#333;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+}
+
+
+@media only screen and (max-width: 700px){
+.headernav{
+    height: 265px;
+    display: table;
+    position: relative;
+}
+.cabecalho{
+    width: 100%;
+    float: none;
+}
+.textoheader{
+    width: 100%;
+    text-align: center;
+    float: none;
+}
+.logoheader{
+    width: 100%;
+    text-align: center;
+    float: none;
+}
+.menu{
+    clear: both;
+    width: 100%;
+    float: none;
+    display: block;
+    position: relative;
+}
+.menulista{
+    clear: both;
+    display: block;
+    position: relative;
+
+}
+
+.rodape{
+    position: relative;
+}
+nav{
+    position: relative;
+    display: block;
+    float: none;
+    height: 54px;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: unset;
+    background-color: #333;
+    width: 100%;
+
+
+}
+
+li {
+    float: none;
+    width: 100%;
+    position: relative;
+    
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    position: relative;
+    
+}
+
+li a:hover:not(.active) {
+    background-color: #4CAF50;
+}
