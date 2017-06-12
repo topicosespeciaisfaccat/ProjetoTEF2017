@@ -1,12 +1,10 @@
 <?php
 
-if (!isset($_COOKIE['tipoUsuario'])) {
+if (!isset($_COOKIE['tipoUsuario']) && $_COOKIE['tipoUsuario'] != 'Administrador') {
 	header("Location: /ProjetoTEF2017/acessoNegado.php");
 }
 
 $titulo = "Manutenção de usuario";
-
-$conexao = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 if (mysqli_connect_errno($conexao)) {
 	echo "A conexao falhor, erro : " . mysqli_connect_errno();
@@ -26,7 +24,7 @@ if (isset($_GET['p'])) {
 
 switch ($passo) {
 case "cadastrar":
-	cadastrarUsuario($conexao, $titulo);
+	cadastrarUsuario($conexao);
 
 	break;
 case "excluir":
@@ -34,6 +32,11 @@ case "excluir":
 	$retornoExc = excluirUsuario($conexao);
 	$dados = listarUsuario($conexao);
 	require "viewListar.php";
+	break;
+
+case "alterar":
+
+	alterarUsuario($conexao);
 	break;
 
 default:
@@ -56,6 +59,42 @@ function listarUsuario($conexao) {
 
 }
 
+function alterarUsuario($conexao) {
+
+	if (isset($_POST['frmAlterarUsuario'])) {
+
+		$cpf = $_POST['frmAlterarUsuario'];
+		$nome = $_POST['txtNome'];
+		$senha = $_POST['txtSenha'];
+		$tipo = $_POST['txtTipo'];
+
+		$resultado = _alterarUsuarioPorCodigo($conexao, $cpf, $nome, $senha, $tipo);
+
+		if (!$resultado) {
+			echo "Falha ao alterar usuario, cfp :" . $cpf;
+			return false;
+		} else {
+
+			$retornoExc = "Usuario alterado com sucesso!";
+			$dados = listarUsuario($conexao);
+			require "viewListar.php";
+		}
+
+	} else {
+		$cpf = (isset($_GET["codigo"])) ? $_GET["codigo"] : -1;
+		$resultado = _obterUsuarioPorCodigo($conexao, $cpf);
+
+		if (!$resultado) {
+			echo "Falha em buscar usuario por cfp :" . $cpf;
+			return false;
+		} else {
+			$dados = mysqli_fetch_assoc($resultado);
+			require "viewAlterar.php";
+		}
+	}
+
+}
+
 function excluirUsuario($conexao) {
 
 	$codigo = (isset($_GET["codigo"])) ? $_GET["codigo"] : -1;
@@ -69,7 +108,8 @@ function excluirUsuario($conexao) {
 	}
 }
 
-function cadastrarUsuario($conexao, $titulo) {
+function cadastrarUsuario($conexao) {
+	$titulo = "Cadastrar usuario";
 	//verificar se o formulario foi postado
 	if (isset($_POST['formularioCadastroUsuario'])) {
 		//O formulario foi postado

@@ -21,11 +21,15 @@
 			 <div class="wrapper">
 
 				<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
-					<h3><div class="inner-dash"><a href="index.php?r=cadastro/empresa&p=cadastrar" title="Empresa">Cadastrar</a></div></h3>
+					<h3><div class="inner-dash">
+
+					<a href="index.php?r=cadastro/empresa&p=cadastrar" title="Empresa">Cadastrar</a></div></h3>
 
 				</div>
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px;margin:1 ;margin-left:4%;	padding:20px;">
-					<h3><div class="inner-dash"><a href="index.php?r=cadastro/empresa&p=listar">Listar</a></div> </h3>
+					<h3><div class="inner-dash"
+
+					<a href="index.php?r=cadastro/empresa&p=listar">Listar</a></div> </h3>
 				</div>
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px; margin:1;margin-left:4%;	padding:20px;">
 					<h3> <div class="inner-dash">Pesquisar</div></h3>
@@ -39,7 +43,7 @@
 
 
  	<!-- INICIO DE RODAPÉ -->
-		<?php require"./layout/footer.php";?>
+		<?php require "./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ -->
 </body>
 </html>

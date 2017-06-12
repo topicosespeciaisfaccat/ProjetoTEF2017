@@ -39,6 +39,7 @@
 			<td>Nome</td>
 			<td>Tipo de usuario</td>
 			<td>----</td>
+			<td>----</td>
 		</tr>
 		<?php foreach ($dados as $linha) {?>
 		<tr>
@@ -49,6 +50,7 @@
 
 
 			<td><a href="index.php?r=cadastro/usuario&p=excluir&codigo=<?=$linha["cpf"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
+			<td><a href="index.php?r=cadastro/usuario&p=alterar&codigo=<?=$linha["cpf"]?>">Alterar</a></td>
 		</tr>
 
 		<?php }?>

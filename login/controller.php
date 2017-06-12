@@ -1,13 +1,6 @@
 <?php
 $titulo = "Login indica bonus";
 
-$conexao = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-
-if (mysqli_connect_errno($conexao)) {
-	echo "A conexao falhor, erro : " . mysqli_connect_errno();
-	exit();
-}
-
 require "modelUsuario.php";
 
 if (isset($_POST['formularioLogin'])) {
@@ -28,12 +21,12 @@ function obtemUsuario($conexao) {
 
 			$row = $resultado->fetch_array(MYSQLI_NUM);
 
-			if (isset($row[3]) && $row[3] == "administrador") {
+			if (isset($row[3]) && $row[3] == "Administrador") {
 
-				setcookie("usuario", $row[2], time() + 60 * 60 * 24 * 30);
-				setcookie("tipoUsuario", $row[3], time() + 60 * 60 * 24 * 30);
+				setcookie("usuario", $row[2], time() + 3600); /*Uma hora de cookie */
+				setcookie("tipoUsuario", $row[3], time() + 3600);
 
-				header("Location: ./dashboard/index.php");
+				header("Location: /ProjetoTEF2017/index.php?r=dashboard");
 
 			} else {
 

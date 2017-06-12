@@ -1,12 +1,10 @@
 <?php
 
-if (!isset($_COOKIE['tipoUsuario'])) {
+if (!isset($_COOKIE['tipoUsuario']) && $_COOKIE['tipoUsuario'] != 'Administrador') {
 	header("Location: /ProjetoTEF2017/acessoNegado.php");
 }
 
 $titulo = "Manutenção de usuario";
-
-$conexao = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 if (mysqli_connect_errno($conexao)) {
 	echo "A conexao falhor, erro : " . mysqli_connect_errno();
@@ -44,7 +42,7 @@ case "listar":
 
 case "dashempresa":
 	# listar...
-//	$dados = listarUsuario($conexao);
+	//	$dados = listarUsuario($conexao);
 	require "viewDashEmpresa.php";
 	break;
 
@@ -54,7 +52,7 @@ case "btncadastrar":
 
 default:
 	# listar...
-//	$dados = listarUsuario($conexao);
+	//	$dados = listarUsuario($conexao);
 	require "viewDashEmpresa.php";
 	break;
 }

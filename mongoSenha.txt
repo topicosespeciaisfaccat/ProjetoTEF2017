@@ -1,0 +1,4 @@
+alexti
+PAMenT87yPM3JAV1
+
+mongodb://alexti:PAMenT87yPM3JAV1@cluster0-shard-00-00-w4d5l.mongodb.net:27017,cluster0-shard-00-01-w4d5l.mongodb.net:27017,cluster0-shard-00-02-w4d5l.mongodb.net:27017/admin?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
