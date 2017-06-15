@@ -16,7 +16,7 @@ exit();
 
 //vamos conectar com o banco de dados
 //hot, username, pass, dbname
-include "app.php";
+require "app.php";
 
 //vamos receber uma variavel chamada r que significa rota
 //$r = "login";

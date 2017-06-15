@@ -27,9 +27,9 @@
 
 				</div>
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px;margin:1 ;margin-left:4%;	padding:20px;">
-					<h3><div class="inner-dash"
+					<h3><div class="inner-dash">
 
-					<a href="index.php?r=cadastro/empresa&p=listar">Listar</a></div> </h3>
+					<a href="index.php?r=cadastro/empresa&p=listar" title="Listar Empresa">Listar</a></div> </h3>
 				</div>
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px; margin:1;margin-left:4%;	padding:20px;">
 					<h3> <div class="inner-dash">Pesquisar</div></h3>

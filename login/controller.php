@@ -1,6 +1,7 @@
 <?php
 $titulo = "Login indica bonus";
 
+
 require "modelUsuario.php";
 
 if (isset($_POST['formularioLogin'])) {

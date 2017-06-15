@@ -1,10 +1,7 @@
 <?php
 
 function _listaEmpresa($conexao) {
-	$sql = "SELECT cpf, email, nome, descricao  tipo
-	          from usuario
-	         join tipoUsuario on usuario.tipoUsuario = tipoUsuario.id
-	          order by nome";
+	$sql = "select e.id, e.descricao, g.descricao as grupo from empresa e join grupoempresa g on e.grupoempresa_id=g.id";
 	$resultado = mysqli_query($conexao, $sql);
 
 	return $resultado;
@@ -18,10 +15,10 @@ function _excluirUsuario($conexao, $codigo) {
 	return $resultado;
 }
 
-function _cadastrarEmpresa($conexao, $nome, $grupoempresa) {
+function _cadastrarEmpresa($conexao, $id, $nome, $idgrupoempresa) {
 
-	$sql = sprintf("INSERT INTO empresa(id, descricao, idgrupoempresa)
-		                 VALUES ('', %s,%s)", $nome, $grupoempresa);
+	$sql = sprintf("INSERT INTO empresa(id,descricao,GrupoEmpresa_id)
+		                 VALUES (%s,'%s','%s')", $id, $nome, $idgrupoempresa);
 	$resultado = mysqli_query($conexao, $sql);
 
 	return $resultado;

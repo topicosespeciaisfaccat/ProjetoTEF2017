@@ -1,0 +1,217 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"listar",
+				"listarEmpresa"
+			],
+			[
+				"descr",
+				"descricao"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "install ",
+		"selected_items":
+		[
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/projetotef2017"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/viewDashEmpresa.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/usuario/modelUsuario.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/modelEmpresa.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/controller.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/viewCadastrar.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/index.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/usuario/controller.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/viewListar.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/usuario/viewListar.php",
+		"/C/xampp/htdocs/projetotef2017/dashboard/view.php",
+		"/C/xampp/htdocs/projetotef2017/dashboard/index.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/usuario/viewCadastrar.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/dashEmpresa.php",
+		"/C/xampp/htdocs/projetotef2017/layout/footer.php",
+		"/C/xampp/htdocs/projetotef2017/dashboard/controller.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/view/index.php",
+		"/C/xampp/htdocs/projetotef2017/index.php",
+		"/C/xampp/htdocs/projetotef2017/login/index.php",
+		"/C/xampp/htdocs/projetotef2017/login/view.php",
+		"/C/xampp/htdocs/projetotef2017/login/controller.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/usuario/index.php",
+		"/C/xampp/htdocs/projetotef2017/acessoNegado.php",
+		"/C/xampp/htdocs/projetotef2017/dashboard/_view.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/view/viewCadastrar.php",
+		"/C/xampp/htdocs/projetotef2017/layout/header.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/view/viewListar.php",
+		"/C/xampp/htdocs/projetotef2017/layout/imagens/background.jpg",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/view/dash.php",
+		"/C/xampp/htdocs/projetotef2017/php.php",
+		"/C/xampp/htdocs/projetotef2017/cadastro/empresa/modelUsuario.php",
+		"/C/xampp/htdocs/projetotef2017/login/modelUsuario.php",
+		"/C/xampp/htdocs/phpws/rest-cliente/index.html",
+		"/C/xampp/htdocs/phpws/api/index.php",
+		"/C/xampp/htdocs/phpws/api/auth.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"crlf",
+			"lf"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sublime-project.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

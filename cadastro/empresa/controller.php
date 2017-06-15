@@ -36,7 +36,7 @@ case "excluir":
 	break;
 
 case "listar":
-	$dados = listarEmpresa($conexao);
+	$dadosempresa = listarEmpresa($conexao);
 	require "viewListar.php";
 	break;
 
@@ -47,7 +47,7 @@ case "dashempresa":
 	break;
 
 case "btncadastrar":
-	cadastrarEmpresa($conexao, $titulo);
+	cadastrarEmpresa($conexao);
 	break;
 
 default:
@@ -63,7 +63,7 @@ function listarEmpresa($conexao) {
 	$data = array();
 
 	while ($row = mysqli_fetch_array($resultado)) {
-		$data[] = array("cpf" => $row["cpf"], "email" => $row["email"], "nome" => $row["nome"], "tipo" => $row["tipo"]);
+		$data[] = array("id" => $row["id"], "descricao" => $row["descricao"], "grupo" => $row["grupo"]);
 	}
 
 	return $data;
@@ -96,20 +96,22 @@ function excluirUsuario($conexao) {
 	}
 }
 
-function cadastrarEmpresa($conexao, $titulo) {
+function cadastrarEmpresa($conexao) {
+	$titulo = "Cadastrar Empresa";
 	//verificar se o formulario foi postado
 	if (isset($_POST['formularioCadastroEmpresa'])) {
 		//O formulario foi postado
+		$id = $_POST['txtId'];
 		$nome = $_POST['txtNome'];
-		$idgrupoempresa = $_POST['grupoempresa'];
+		$idgrupoempresa = $_POST['idgrupoempresa'];
 
-		if (_cadastrarEmpresa($conexao, $nome, $idgrupoempresa)) {
-			$retornoExc = "Empresa cadastrada com sucesso!";
+		if (_cadastrarEmpresa($conexao, $id, $nome, $idgrupoempresa)) {
+			$retornoExc = "Empresa ".$nome." cadastrada com sucesso!";
 			//$dados = listarEmpresa($conexao);
-			require "viewListar.php";
+			require "viewDashEmpresa.php";
 		} else {
 			echo "o cadastro falhou";
-			require "viewCadastrar.php";
+			require "viewDashEmpresa.php";
 		}
 
 	} else {

@@ -1,0 +1,13 @@
+{
+        "folders": [
+            {
+            "follow_symlinks": true,
+            "path": "."
+            }
+        ],
+        "settings": {
+            "xdebug": {
+                "url": "http://127.1.1.0/ProjetoTEF2017/",
+            }
+        }
+    }

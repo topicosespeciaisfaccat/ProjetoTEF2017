@@ -26,26 +26,23 @@
 
 	<table border="1">
 		<tr>
-			<td>Cpf</td>
-			<td>Email</td>
-			<td>Nome</td>
-			<td>Tipo de usuario</td>
-			<td>----</td>
+			<td>Id</td>
+			<td>Empresa</td>
+			<td>Grupo Empresa</td>
 		</tr>
-		<?php foreach ($dados as $linha) {?>
+		<?php foreach ($dadosempresa as $linha) {?>
 		<tr>
-			<td><?=$linha["cpf"]?> </td>
-			<td><?=$linha["email"]?> </td>
-			<td><?=$linha["nome"]?> </td>
-			<td><?=$linha["tipo"]?> </td>
+			<td><?=$linha['id']?> </td>
+			<td><?=$linha['descricao']?> </td>
+			<td><?=$linha['grupo']?> </td>
 
 
-			<td><a href="index.php?r=cadastro/usuario&p=excluir&codigo=<?=$linha["cpf"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
+			<td><a href="index.php?r=cadastro/empresa&p=excluir&codigo=<?=$linha["id"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
 		</tr>
 
 		<?php }?>
 	</table>
-	<a href="/ProjetoTEF2017/index.php?r=cadastro/usuario&p=cadastrar"> Cadastrar novo usuario</a>
+	<a href="/ProjetoTEF2017/index.php?r=cadastro/empresa&p=cadastrar"> Cadastrar nova empresa</a>
 
 	<!-- INICIO DE RODAPÉ -->
 	   <?php require"./layout/footer.php";?>

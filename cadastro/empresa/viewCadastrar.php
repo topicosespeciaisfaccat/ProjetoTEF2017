@@ -14,18 +14,19 @@
 	<h1>Formulario de cadastro de empresa</h1>
 
 	<form method="POST" action="index.php?r=cadastro/empresa&p=btncadastrar">
-
+		<p>ID da Empresa:</p>
+		<p><input type="text" maxlength="11" minlength="1" name="txtId"></p>
 		<p>Nome da Empresa:</p>
-		<p><input type="text" maxlength="11" minlength="11" name="txtNome"></p>
+		<p><input type="text" maxlength="11" minlength="1" name="txtNome"></p>
 		<p>Empresa do Grupo :</p>
-		
-		<select name="grupoempresa">
+		<select name="idgrupoempresa">
 			<?php foreach ($dadosgrupo as $linha) {?>
 		   	<option value="<?=$linha['id'] ?>"><?=$linha['descricao'] ?></option>
 		    <?php }?>
         </select>
 
-		<input type="submit" name="CadastrarEmpresa">
+
+		<input type="submit" name="Cadastrar Empresa">
 		<input type="hidden" name="formularioCadastroEmpresa">
 	</form>
 	<!-- INICIO DE RODAPÉ -->
