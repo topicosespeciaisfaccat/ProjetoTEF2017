@@ -39,23 +39,25 @@
 
 		<section class="chamada" >
 			 <div class="wrapper">
-	       <div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
+	       		<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">
 					<input type="submit" class="Dashboard" name="Empresa" value="empresa" />
-
 					</div></h3>
 				</div>
+
+				<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
+					<h3><div class="inner-dash">
+					<input type="submit" class="Dashboard" name="Funcionario" value="Funcionario" />
+					</div></h3>
+				</div>
+
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px;margin:1 ;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">
 					<input type="submit" class="Dashboard" name="Usuario" value="Usuarios" />
-
 					</div> </h3>
-
-
 					 <input type="hidden" name="formularioDashboard">
-
-
 				</div>
+
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px; margin:1;margin-left:4%;	padding:20px;">
 					<h3> <div class="inner-dash">
 						<input type="submit" class="Dashboard" name="Vendas" value="Vendas" />

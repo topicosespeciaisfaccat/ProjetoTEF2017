@@ -16,13 +16,17 @@ function get_post_action($name) {
 }
 
 if (isset($_POST['formularioDashboard'])) {
-	switch (get_post_action('Empresa', 'Usuario')) {
+	switch (get_post_action('Empresa', 'Usuario', 'Funcionario')) {
 	case 'Empresa':
 		header("Location: /ProjetoTEF2017/index.php?r=cadastro/empresa&p=dashempresa");
 		break;
 
 	case 'Usuario':
 		header("Location: /ProjetoTEF2017/index.php?r=cadastro/usuario");
+		break;
+
+	case 'Funcionario':
+		header("Location: /ProjetoTEF2017/index.php?r=cadastro/funcionario");
 		break;
 
 	default:
