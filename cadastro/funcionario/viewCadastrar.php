@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="layout/css/estilo.css">
     <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="./js/funcionario.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.min.js"></script>
 </head>
 <body class="center clearfix">
  <!-- INICIO DE CABEÇALHO -->
@@ -31,7 +32,10 @@
 	<form method="POST" action="index.php?r=cadastro/funcionario&p=cadastrar">
 
 		<p>Nome do usuario :</p>
-		<p><input type="text" maxlength="200" name="txtNome"></p>
+		<div class="frmSearch">
+            <input type="text" id="search-box" placeholder="Country Name" />
+            <div id="suggesstion-box"></div>
+        </div>
 
 		<select name="usuario" id="usuario">
 			<option>Default</option>

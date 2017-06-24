@@ -22,18 +22,6 @@ if (isset($_GET['p'])) {
 	$passo = null;
 }
 
-if (isset($_POST['funcao'])) {
-	$funcao = $_POST['funcao'];
-	switch ($funcao) {
-	case "obterCargoSolicitacao":
-		obterCargo($conexao);
-		break;
-	case "obeterEmpresaSolicitacao":
-		obterEmpresa();
-		break;
-	}
-}
-
 switch ($passo) {
 case "cadastrar":
 	cadastrarFuncionario($conexao);
@@ -94,8 +82,9 @@ function obterCargo($conexao) {
 		$data[] = array("id" => $row["id"], "cargo" => $row["cargo"]);
 	}
 
-	//return json_encode($data);
-	echo json_encode($data);
+	return json_encode($data);
+	//echo json_encode($data);
+	exit();
 }
 
 function obterEmpresa() {
