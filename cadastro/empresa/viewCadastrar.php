@@ -4,6 +4,44 @@
   	<meta charset="utf-8">
 	<title><?=$titulo?></title>
 	<link rel="stylesheet" type="text/css" href="./layout/css/estilo.css">
+	<style type="text/css">
+            #container{
+               width:800px;
+               margin:0 auto;
+            }
+
+            #search{
+               width:700px;
+               padding:10px;
+            }
+
+            #button{
+               display: block;
+               width: 100px;
+               height:30px;
+               border:solid #366FEB 1px;
+               background: #91B2FA;
+            }
+
+            ul{
+            	margin-left:-40px;
+            }
+
+            ul li{
+            	list-style-type: none;
+            	border-bottom: dotted 1px black;
+              height: 50px;
+            }
+
+            li:hover{
+            	background: #A592E8;
+            }
+
+            a{
+            	text-decoration: none;
+              font-size: 18px;
+            }
+  	    </style>
 </head>
 <body class="center clearfix">
  <!-- INICIO DE CABEÇALHO -->
@@ -21,7 +59,7 @@
 		<p>Empresa do Grupo :</p>
 		<select name="idgrupoempresa">
 			<?php foreach ($dadosgrupo as $linha) {?>
-		   	<option value="<?=$linha['id'] ?>"><?=$linha['descricao'] ?></option>
+		   	<option value="<?=$linha['id']?>"><?=$linha['descricao']?></option>
 		    <?php }?>
         </select>
 
@@ -30,7 +68,7 @@
 		<input type="hidden" name="formularioCadastroEmpresa">
 	</form>
 	<!-- INICIO DE RODAPÉ -->
-	   <?php require"./layout/footer.php";?>
+	   <?php require "./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ <--></-->
 </body>
 </html>

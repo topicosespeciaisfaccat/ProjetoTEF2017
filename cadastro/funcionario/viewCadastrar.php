@@ -7,6 +7,45 @@
     <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="./js/funcionario.js"></script>
     <script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.min.js"></script>
+
+<style type="text/css">
+            #container{
+               width:800px;
+               margin:0 auto;
+            }
+
+            #search{
+               width:700px;
+               padding:10px;
+            }
+
+            #button{
+               display: block;
+               width: 100px;
+               height:30px;
+               border:solid #366FEB 1px;
+               background: #91B2FA;
+            }
+
+            ul{
+                margin-left:-40px;
+            }
+
+            ul li{
+                list-style-type: none;
+                border-bottom: dotted 1px black;
+              height: 50px;
+            }
+
+            li:hover{
+                background: #A592E8;
+            }
+
+            a{
+                text-decoration: none;
+              font-size: 18px;
+            }
+        </style>
 </head>
 <body class="center clearfix">
  <!-- INICIO DE CABEÇALHO -->
@@ -32,9 +71,11 @@
 	<form method="POST" action="index.php?r=cadastro/funcionario&p=cadastrar">
 
 		<p>Nome do usuario :</p>
-		<div class="frmSearch">
-            <input type="text" id="search-box" placeholder="Country Name" />
-            <div id="suggesstion-box"></div>
+
+       <div id="container">
+             <input type="text" id="search" placeholder="Search Tutorials Here... Ex: Java, Php, Jquery..."/>
+             <input type="button" id="button" value="Search" />
+             <ul id="result"></ul>
         </div>
 
 		<select name="usuario" id="usuario">

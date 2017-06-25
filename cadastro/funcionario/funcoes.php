@@ -4,6 +4,11 @@ $db_user = "b92b3058bbebc1";
 $db_pass = "f582640e";
 $db_name = "meuazuresql";
 
+/*$db_host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "meuazuresql";*/
+
 $conexao = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 if (mysqli_connect_errno($conexao)) {
@@ -15,10 +20,11 @@ if (isset($_POST['funcao'])) {
 	$funcao = $_POST['funcao'];
 	switch ($funcao) {
 	case "obterCargoSolicitacao":
-		_obterCargo($conexao);
+		_obterCargoSolicitacao($conexao);
 		break;
 	case "obterEmpresaSolicitacao":
-		_obterEmpresa($conexao);
+
+		_obterEmpresaSolicitacao($conexao);
 		break;
 
 	case "obterUsuarioSolicitacao":
@@ -29,18 +35,29 @@ if (isset($_POST['funcao'])) {
 }
 
 function _obterUsuario($conexao, $key) {
-	$sql = "SELECT cpf+' - '+ nome  from usuario  where nome like '" . $key . "'  order by nome ";
+	$sql = "SELECT cpf, nome from usuario  where nome like '" . $key . "%'  order by nome ";
 	$resultado = mysqli_query($conexao, $sql);
-	$rows = array();
+	$found = mysqli_num_rows($resultado);
 
-	while ($temp = mysqli_fetch_assoc($resultado)) {
-		$rows[] = $temp;
+	//$rows = array();
+
+	//while ($temp = mysqli_fetch_assoc($resultado)) {		$rows[] = $temp;	}
+
+	//https://agung-setiawan.com/how-to-create-ajax-search-using-php-jquery-and-mysql/
+
+	if ($found > 0) {
+		while ($row = mysqli_fetch_assoc($resultado)) {
+
+			echo "<li>$row[nome]</br><a href=$row[cpf]>$row[cpf]</a></li>";
+		}
+	} else {
+		echo "<li>No Tutorial Found<li>";
 	}
 
-	echo json_encode($rows);
+	//echo json_encode($rows);
 }
 
-function _obterCargo($conexao) {
+function _obterCargoSolicitacao($conexao) {
 
 	$sql = sprintf("SELECT id, descricao cargo FROM cargo;");
 	$resultado = mysqli_query($conexao, $sql);
@@ -51,17 +68,21 @@ function _obterCargo($conexao) {
 	}
 
 	echo json_encode($rows);
+
 }
 
-function _obterEmpresa($conexao) {
-	$sql = sprintf("SELECT empresa.id,
-					       empresa.descricao empresa
-					FROM empresa");
+function _obterEmpresaSolicitacao($conexao) {
+	$sql = "select  id, descricao empresa from empresa ";
+	mysqli_set_charset($conexao, "utf8");
 	$resultado = mysqli_query($conexao, $sql);
-	$rows = array();
+
+	$rowsEmpresa = array();
+
 	while ($temp = mysqli_fetch_assoc($resultado)) {
-		$rows[] = $temp;
+		$rowsEmpresa[] = $temp;
 	}
 
-	echo json_encode($rows);
+	//var_dump(json_encode($rowsEmpresa));
+
+	echo json_encode($rowsEmpresa);
 }
