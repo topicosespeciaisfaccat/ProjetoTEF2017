@@ -12,19 +12,20 @@
 
 
 	<!-- INICIO DE CORPO DO SITE -->
+			<div class="conteudo">
+			<section>
+				<div class="home">	
 	<form method="POST" action="./cadastro/empresa/index.php">
 		<?php if (isset($retornoExc)) {?>
 			<h1><?=$retornoExc?></h1>
 
 		<?php }?>
-		<section class="chamada" >
-			 <div class="wrapper">
+			 <div class="wrapperadmin">
 
 				<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">
 
 					<a href="index.php?r=cadastro/empresa&p=cadastrar" title="Empresa">Cadastrar</a></div></h3>
-
 				</div>
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px;margin:1 ;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">
@@ -38,7 +39,9 @@
 		</section>
 	</form>
 
-
+</div>
+</section>
+</div>
     <!-- FIM DE CORPO DO SITE -->
 
 
