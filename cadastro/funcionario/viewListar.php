@@ -15,7 +15,7 @@
 				<div class="wrapperadmin">	
 				<?php if (isset($_COOKIE['usuario'])) {?>
 
-					<h1>Bem vindo <?=$_COOKIE['usuario']?>, abaixo listagem de usuarios :</h1>
+					<h1>Bem vindo <?=$_COOKIE['usuario']?>, abaixo listagem de funcionários:</h1>
 
 				<?php }?>
 
@@ -52,7 +52,7 @@
 
 					<?php }?>
 				</table>
-				<a href="/ProjetoTEF2017/index.php?r=cadastro/funcionario&p=cadastrar"> Cadastrar novo usuario</a>
+				<a href="/ProjetoTEF2017/index.php?r=cadastro/funcionario&p=cadastrar"> Cadastrar novo funcionário</a>
 			</div>
 			</div>
 		</section>

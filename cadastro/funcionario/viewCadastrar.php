@@ -24,7 +24,7 @@
 
                           </div>
 
-                  	<h1>Formulario de cadastro de usuario</h1>
+                  	<h1>Formulario de cadastro de Funcionário</h1>
 
                   	<form method="POST" action="index.php?r=cadastro/funcionario&p=cadastrar">
 
