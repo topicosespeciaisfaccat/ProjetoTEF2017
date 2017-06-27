@@ -47,12 +47,14 @@
 
 
 						<td class="excluirtabela"><a href="index.php?r=cadastro/funcionario&p=excluir&codigo=<?=$linha["codigo"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
-						<td><a href="index.php?r=cadastro/funcionario&p=alterar&codigo=<?=$linha["codigo"]?>">Alterar</a></td>
+						<td class="excluirtabela"><a href="index.php?r=cadastro/funcionario&p=alterar&codigo=<?=$linha["codigo"]?>">Alterar</a></td>
 					</tr>
 
 					<?php }?>
 				</table>
+				<div class="linkbotao">
 				<a href="/ProjetoTEF2017/index.php?r=cadastro/funcionario&p=cadastrar"> Cadastrar novo funcionário</a>
+				</div>
 			</div>
 			</div>
 		</section>
