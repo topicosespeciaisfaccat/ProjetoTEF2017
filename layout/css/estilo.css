@@ -52,12 +52,13 @@ body{
 }
 .rodape{
     clear: both;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
     position:fixed;
-    bottom:0; 
+    bottom: -10px; 
 
 }
+
 
 /*cabeçalho*/
 /*logo*/
@@ -232,6 +233,25 @@ li a:hover:not(.active) {
         background-color: #4CAF50;
         }
 
+.wrapperform{
+    clear: both;
+    height: 100%;
+    width: 60%;
+    position: relative;
+    margin-left: 20%;
+    padding: 20px;
+    background-color: #BEBEBE;
+    border-radius: 7px;
+}
+.wrapperform input{
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+.wrapperform p{
+    font-weight: bold;
+    font-size: 20;
+}
 .tabelalista{
     background-color: #BEBEBE;
     text-decoration: none;

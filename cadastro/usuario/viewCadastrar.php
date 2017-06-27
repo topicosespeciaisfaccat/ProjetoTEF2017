@@ -13,7 +13,7 @@
 	<div class="conteudo">
 		<section>
 			<div class="home">	
-				<div class="wrapperadmin">
+				<div class="wrapperform">
 
 					<h1>Formulario de cadastro de usuario</h1>
 
