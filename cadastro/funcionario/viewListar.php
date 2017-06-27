@@ -27,8 +27,8 @@
 				<?php }?>
 
 
-				<table border="1">
-					<tr>
+				<table class="tabelalista" >
+					<tr class="indicetabela">
 						<td>codigo</td>
 						<td>cargo</td>
 						<td>Empresa</td>
@@ -38,7 +38,7 @@
 						<td>----</td>
 					</tr>
 					<?php foreach ($dados as $linha) {?>
-					<tr>
+					<tr class="dadostabela">
 						<td><?=$linha["codigo"]?> </td>
 						<td><?=$linha["cargo"]?> </td>
 						<td><?=$linha["empresa"]?> </td>
@@ -46,7 +46,7 @@
 						<td><?=$linha["cpf"]?> </td>
 
 
-						<td><a href="index.php?r=cadastro/funcionario&p=excluir&codigo=<?=$linha["codigo"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
+						<td class="excluirtabela"><a href="index.php?r=cadastro/funcionario&p=excluir&codigo=<?=$linha["codigo"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
 						<td><a href="index.php?r=cadastro/funcionario&p=alterar&codigo=<?=$linha["codigo"]?>">Alterar</a></td>
 					</tr>
 

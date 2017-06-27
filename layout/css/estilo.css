@@ -231,6 +231,49 @@ li a:hover:not(.active) {
 .wrapperadmin input.Dashboard:hover {
         background-color: #4CAF50;
         }
+
+.tabelalista{
+    background-color: #BEBEBE;
+    text-decoration: none;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+.indicetabela td{
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid black;
+
+
+}
+.excluirtabela{
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    border: 1px solid black;
+
+}
+.excluirtabela a{
+    text-decoration: none;
+    color: black;
+
+}
+.excluirtabela:hover{
+    background-color: #4CAF50;
+}
+.dadostabela td{
+    border: 1px solid black;
+    background-color: white;
+}
+
 /*rodapé*/
 footer{
     background-color:#333;
