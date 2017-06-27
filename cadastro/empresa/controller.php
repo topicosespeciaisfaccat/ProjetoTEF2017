@@ -14,6 +14,32 @@ if (mysqli_connect_errno($conexao)) {
 qual sera a view a ser carregada
 p = listar e p = cadastrar e p=excluir
  */
+
+function get_post_action($name) {
+	$params = func_get_args();
+
+	foreach ($params as $name) {
+		if (isset($_POST[$name])) {
+			return $name;
+		}
+	}
+}
+
+if (isset($_POST['formularioDashboard'])) {
+	switch (get_post_action('CadastroEmpresa', 'ListaEmpresa')) {
+	case 'CadastroEmpresa':
+		header("Location: /ProjetoTEF2017/index.php?r=cadastro/empresa&p=cadastrar");
+		break;
+
+	case 'ListaEmpresa':
+		header("Location: /ProjetoTEF2017/index.php?r=cadastro/empresa&p=listar");
+		break;
+
+	default:
+//no action sent
+	}
+}
+
 require "modelEmpresa.php";
 
 if (isset($_GET['p'])) {
@@ -106,7 +132,7 @@ function cadastrarEmpresa($conexao) {
 		$idgrupoempresa = $_POST['idgrupoempresa'];
 
 		if (_cadastrarEmpresa($conexao, $id, $nome, $idgrupoempresa)) {
-			$retornoExc = "Empresa ".$nome." cadastrada com sucesso!";
+			$retornoExc = "Empresa " . $nome . " cadastrada com sucesso!";
 			//$dados = listarEmpresa($conexao);
 			require "viewDashEmpresa.php";
 		} else {

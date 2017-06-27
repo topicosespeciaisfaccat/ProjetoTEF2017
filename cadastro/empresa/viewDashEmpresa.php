@@ -14,8 +14,9 @@
 	<!-- INICIO DE CORPO DO SITE -->
 			<div class="conteudo">
 			<section>
-				<div class="home">	
-	<form method="POST" action="./cadastro/empresa/index.php">
+				<div class="home">
+	<form method="POST" action="./cadastro/empresa/index.php" id="dashbord">
+
 		<?php if (isset($retornoExc)) {?>
 			<h1><?=$retornoExc?></h1>
 
@@ -24,17 +25,26 @@
 
 				<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">
+					<input type="submit" name="CadastroEmpresa" value="CadastroEmpresa" >
 
-					<a href="index.php?r=cadastro/empresa&p=cadastrar" title="Empresa">Cadastrar</a></div></h3>
+					<!--<a href="index.php?r=cadastro/empresa&p=cadastrar" title="Empresa">Cadastrar</a>-->
+
+					</div></h3>
 				</div>
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px;margin:1 ;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">
 
-					<a href="index.php?r=cadastro/empresa&p=listar" title="Listar Empresa">Listar</a></div> </h3>
+					<input type="submit" name="ListaEmpresa" value="ListaEmpresa">
+
+					<!--<a href="index.php?r=cadastro/empresa&p=listar" title="Listar Empresa">Listar</a>-->
+
+					<input type="hidden" name="formularioDashboard">
+					</div> </h3>
 				</div>
 				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px; margin:1;margin-left:4%;	padding:20px;">
 					<h3> <div class="inner-dash">Pesquisar</div></h3>
 				</div>
+
 			</div>
 		</section>
 	</form>
