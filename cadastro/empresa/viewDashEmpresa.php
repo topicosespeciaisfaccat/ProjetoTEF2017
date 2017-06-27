@@ -23,18 +23,18 @@
 		<?php }?>
 			 <div class="wrapperadmin">
 
-				<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
+				<div>
 					<h3><div class="inner-dash">
-					<input type="submit" name="CadastroEmpresa" value="CadastroEmpresa" >
+					<input type="submit" class="Dashboard" name="CadastroEmpresa" value="Cadastro Empresa" >
 
 					<!--<a href="index.php?r=cadastro/empresa&p=cadastrar" title="Empresa">Cadastrar</a>-->
 
 					</div></h3>
 				</div>
-				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px;margin:1 ;margin-left:4%;	padding:20px;">
+				<div>
 					<h3><div class="inner-dash">
 
-					<input type="submit" name="ListaEmpresa" value="ListaEmpresa">
+					<input type="submit" class="Dashboard" name="ListaEmpresa" value="Lista Empresa">
 
 					<!--<a href="index.php?r=cadastro/empresa&p=listar" title="Listar Empresa">Listar</a>-->
 

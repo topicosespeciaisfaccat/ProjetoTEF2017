@@ -37,7 +37,7 @@
 								</div>
 								<div class="logar">
 									      <!--a class="btn" href="#" type="submit">Logar</a>-->
-									<input type="submit" name="Login usuario">
+									<input type="submit" name="Login usuario" value="Logar">
 									<input type="hidden" name="formularioLogin">
 								    
 								</div>

@@ -17,7 +17,7 @@
 		<div class="conteudo">
 			<section>
 				<div class="home">			
-					<div class="wrapperadmin">	
+					<div class="wrapperform">	
 				<?php require_once "./modeloCSS/includes/contato.html";?>
 					</div>
 			</div>
