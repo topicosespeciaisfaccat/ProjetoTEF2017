@@ -33,6 +33,7 @@
 								<td>Id</td>
 								<td>Empresa</td>
 								<td>Grupo Empresa</td>
+								<td>--</td>
 							</tr>
 							<?php foreach ($dadosempresa as $linha) {?>
 							<tr class="dadostabela">
