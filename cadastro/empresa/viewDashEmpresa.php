@@ -41,10 +41,7 @@
 					<input type="hidden" name="formularioDashboard">
 					</div> </h3>
 				</div>
-				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px; margin:1;margin-left:4%;	padding:20px;">
-					<h3> <div class="inner-dash">Pesquisar</div></h3>
-				</div>
-
+				
 			</div>
 		</section>
 	</form>

@@ -23,7 +23,7 @@
 						<p>Nome do usuário:</p>
 						<p><input type="text" maxlength="200" name="txtNome"></p>
 						<p>E-mail:</p>
-						<p><input type="text" maxlength="200" name="txtEmail"></p>
+						<p><input type="email" maxlength="200" name="txtEmail" placeholder="email@..."></p>
 						<p>Senha:</p>
 						<p><input type="password" maxlength="20" name="txtSenha"></p>
 						<p>Tipo:</p>

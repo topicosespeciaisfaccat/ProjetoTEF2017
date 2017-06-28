@@ -50,7 +50,7 @@
                           </select>
 
 
-                  		<input type="submit" name="Cadastrar funcionario">
+                  		<input type="submit" name="Cadastrar funcionario" Value="Cadastrar">
                   		<input type="hidden" name="formularioCadastroFuncionario">
                   	</form>
                   </div>
