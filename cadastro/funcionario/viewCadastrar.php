@@ -52,8 +52,12 @@
                           </select>
 
 
+<<<<<<< HEAD
                   		<input type="submit" name="Cadastrarfuncionario" value="Cadastrar funcionario">
 
+=======
+                  		<input type="submit" name="Cadastrar funcionario" Value="Cadastrar">
+>>>>>>> a0c68b1018ebf46f30afb2076104e42d80dc77fd
                   		<input type="hidden" name="formularioCadastroFuncionario">
                   	</form>
                   </div>
