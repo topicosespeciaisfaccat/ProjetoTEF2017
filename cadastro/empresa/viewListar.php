@@ -8,42 +8,56 @@
 <body class="center clearfix">
      <!-- INICIO DE CABEÇALHO -->
 	   <?php require"./layout/header.php";?>
+    <div class="conteudo">
+        <section>
+            <div class="home">  
+                <div class="wrapperadmin">  
+
+                		
+					<?php if (isset($_COOKIE['usuario'])) {?>
+
+						<h1>Bem vindo <?=$_COOKIE['usuario']?>, abaixo listagem das empresas :</h1>
+
+					<?php }?>
 
 
-	<?php if (isset($_COOKIE['usuario'])) {?>
 
-		<h1>Bem vindo <?=$_COOKIE['usuario']?>, abaixo listagem das empresas :</h1>
+					<?php if (isset($retornoExc)) {?>
+						<h1><?=$retornoExc?></h1>
 
-	<?php }?>
+					<?php }?>
 
-
-
-	<?php if (isset($retornoExc)) {?>
-		<h1><?=$retornoExc?></h1>
-
-	<?php }?>
-
-
-	<table border="1">
-		<tr>
-			<td>Id</td>
-			<td>Empresa</td>
-			<td>Grupo Empresa</td>
-		</tr>
-		<?php foreach ($dadosempresa as $linha) {?>
-		<tr>
-			<td><?=$linha['id']?> </td>
-			<td><?=$linha['descricao']?> </td>
-			<td><?=$linha['grupo']?> </td>
+						
+						<table class="tabelalista" >
+							<tr class="indicetabela">
+								<td>Id</td>
+								<td>Empresa</td>
+								<td>Grupo Empresa</td>
+								<td>Excluir</td>
 
 
-			<td><a href="index.php?r=cadastro/empresa&p=excluir&codigo=<?=$linha["id"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
-		</tr>
+							</tr>
+							<?php foreach ($dadosempresa as $linha) {?>
+							<tr class="dadostabela">
+								<td><?=$linha['id']?> </td>
+								<td><?=$linha['descricao']?> </td>
+								<td><?=$linha['grupo']?> </td>
 
-		<?php }?>
-	</table>
-	<a href="./index.php?r=cadastro/empresa&p=cadastrar"> Cadastrar nova empresa</a>
 
+								<td class="excluirtabela"><a href="index.php?r=cadastro/empresa&p=excluir&codigo=<?=$linha["id"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
+						
+							</tr>
+
+							<?php }?>
+						</table>
+					
+					<div class="linkbotao">
+						<a href="/ProjetoTEF2017/index.php?r=cadastro/empresa&p=cadastrar"> Cadastrar nova empresa</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 	<!-- INICIO DE RODAPÉ -->
 	   <?php require"./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ -->

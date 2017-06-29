@@ -16,7 +16,7 @@
 			<div class="home">	
 				<div class="wrapperform">
 
-					<h1>Formulario de alteração de usuário</h1>
+					<h1>Formulario de alteração de Empresa</h1>
 
 					<form method="POST" action="index.php?r=cadastro/usuario&p=alterar" name="AlterarUsuario">
 
@@ -29,14 +29,14 @@
 
 
 						<input type="submit" name="Cadastrar usuario">
-						<input type="hidden" name="frmAlterarUsuario" value="<?=$dados['cpf']?>">
+						<input type="hidden" name="frmAlterarEmpresa" value="<?=$dadosempresa['id']?>">
 					</form>
 				</div>
 			</div>
 		</section>
 	</div>
 	<!-- INICIO DE RODAPÉ -->
-	   <?php require_once "/layout/footer.php";?>
+	   <?php require_once "./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ <--></-->
 </body>
 </html>

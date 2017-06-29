@@ -5,22 +5,7 @@
 	<title><?=$titulo?></title>
 	<link rel="stylesheet" type="text/css" href="./layout/css/estilo.css">
 <style>
-		input.Dashboard {
-		cursor: pointer;
-		font-weight: bold;
-		font-size: 150%;
-		background: #00aaaa;
-		color: #fff;
-		border: 0px ;
-		border-radius: 10px;
-		-moz-box-shadow:: 6px 6px 5px #999;
-		-webkit-box-shadow:: 6px 6px 5px #999;
-		box-shadow:: 6px 6px 5px #999;
-		}
 
-		input.Dashboard:hover {
-		color: #ffff00;
-		}
  </style>
 
 </head>
@@ -28,45 +13,49 @@
     <!-- INICIO DE CABEÇALHO -->
 		<?php include "./layout/header.php";?>
     <!-- FIM DE CABEÇALHO -->
+		<div class="conteudo">
+			<section>
+				<div class="home">			
 
 
 	<!-- INICIO DE CORPO DO SITE -->
-	<form method="POST" action="./dashboard/index.php" id="dashboard">
-		<?php if (isset($retornoExc)) {?>
-			<h1><?=$retornoExc?></h1>
+			<form method="POST" action="./dashboard/index.php" id="dashboard">
+				<?php if (isset($retornoExc)) {?>
+					<h1><?=$retornoExc?></h1>
 
-		<?php }?>
+				<?php }?>
 
 		<section class="chamada" >
-			 <div class="wrapper">
-	       		<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
-					<h3><div class="inner-dash">
-					<input type="submit" class="Dashboard" name="Empresa" value="Empresa" />
-					</div></h3>
-				</div>
+					 <div class="wrapperadmin">
+			       		<div>
+							<h3><div class="inner-dash">
+							<input type="submit" class="Dashboard" name="Empresa" value="Empresa" />
+							</div></h3>
+						</div>
 
-				<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
-					<h3><div class="inner-dash">
-					<input type="submit" class="Dashboard" name="Funcionario" value="Funcionario" />
-					</div></h3>
-				</div>
+						<div>
+							<h3><div class="inner-dash">
+							<input type="submit" class="Dashboard" name="Funcionario" value="Funcionários" />
+							</div></h3>
+						</div>
 
-				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px;margin:1 ;margin-left:4%;	padding:20px;">
-					<h3><div class="inner-dash">
-					<input type="submit" class="Dashboard" name="Usuario" value="Usuarios" />
-					</div> </h3>
-					 <input type="hidden" name="formularioDashboard">
-				</div>
+						<div>
+							<h3><div class="inner-dash">
+							<input type="submit" class="Dashboard" name="Usuario" value="Usuários" />
+							</div> </h3>
+							 <input type="hidden" name="formularioDashboard">
+						</div>
 
-				<div style="float: left; width:30%; height:30%; background: #00aaaa; border: 2px; border-radius: 9px; margin:1;margin-left:4%;	padding:20px;">
-					<h3> <div class="inner-dash">
-						<input type="submit" class="Dashboard" name="Vendas" value="Vendas" />
-					</div></h3>
-				</div>
+						<div>
+							<h3> <div class="inner-dash">
+								<input type="submit" class="Dashboard" name="Vendas" value="Vendas" />
+							</div></h3>
+						</div>
+					</div>
+				</form>
 			</div>
 		</section>
-	</form>
-
+	</div>
     <!-- FIM DE CORPO DO SITE -->
 
 

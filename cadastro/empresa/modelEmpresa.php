@@ -24,11 +24,18 @@ function _cadastrarEmpresa($conexao, $nome, $idgrupoempresa) {
 	return $resultado;
 
 }
-
 function _listaGrupoEmpresa($conexao){
 	$sql = "SELECT id, descricao
 	          from grupoempresa
 	          order by descricao";
+	$resultado = mysqli_query($conexao, $sql);
+
+	return $resultado;
+}
+
+function _excluirEmpresa($conexao, $codigo) {
+
+	$sql = sprintf("DELETE FROM empresa WHERE id = %s", $codigo);
 	$resultado = mysqli_query($conexao, $sql);
 
 	return $resultado;

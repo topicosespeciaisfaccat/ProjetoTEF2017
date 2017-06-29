@@ -8,41 +8,36 @@
 	<link rel="stylesheet" type="text/css" href="layout/css/estilo.css">
 </head>
 <body class="center clearfix">
-    <!-- INICIO DE CABEÇALHO -->
+<!-- INICIO DE CABEÇALHO -->
 	    <!-- INICIO DE CABEÇALHO -->
-	<header>
-      <h1><a href="#" title="Sistema de bonificação de postos"><span></span></a></h1>
-        <nav>
-            <ul>
-                <li><a href="#">contato</a></li>
-            </ul>
-        </nav><!-- fim nav -->
-    </header><!-- fim header -->
+		<?php require_once "./layout/header.php";?>
     <!-- FIM DE CABEÇALHO -->
 
 
 	<!-- INICIO DE CORPO DO SITE -->
-	<form method="POST" >
-		<?php if (isset($retornoExc)) {?>
-			<h1><?=$retornoExc?></h1>
+		<div class="conteudo">
+			<section>
+				<div class="home">		
+					<form method="POST" >
+						<?php if (isset($retornoExc)) {?>
+							<h1><?=$retornoExc?></h1>
+						<?php }?>
 
-		<?php }?>
+							 <div class="wrapperadmin">
+								<div style="float: left; width:15%; ">
 
-		<section class="chamada" >
-			 <div class="wrapper">
-				<div style="float: left; width:15%; ">
+								</div>
+								<div style="float: left; width: 35%">
+									<h1> Acesso negado ao usuario!</h1>
+								</div>
+								<div style="float: left; width:10%; ">
 
+								</div>
+							</div>
+					</form>
 				</div>
-				<div style="float: left; width: 35%">
-					<h1> Acesso negado ao usuario!</h1>
-				</div>
-				<div style="float: left; width:10%; ">
-
-				</div>
-			</div>
-		</section>
-	</form>
-
+			</section>
+		</div>
     <!-- FIM DE CORPO DO SITE -->
 
 

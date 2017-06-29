@@ -36,38 +36,38 @@ $(function(){
     });
 </script>
 
-    <header>
-      <h1><a href="dashboard/index.php" title="Sistema de bonificação de postos"><span></span></a></h1>
-        <nav>
-            <ul>
-                <li><a href="#">contato</a></li>
-            </ul>
-        </nav><!-- fim nav -->
-    </header><!-- fim header -->
+<!-- INICIO DE CABEÇALHO -->
+  <?php require_once "./layout/header.php";?>
     <!-- FIM DE CABEÇALHO -->
 
+  <div class="conteudo">
+    <section>
+      <div class="home">  
+        <div class="wrapperform">
+        	<h1>Formulario de alteração de funcionario</h1>
+
+        	<form method="POST" action="index.php?r=cadastro/funcionario&p=alterar" name="AlterarUsuario">
+
+        		<p>funcionario :</p>
+        		<p><input type="text" maxlength="20" name="txtUsuario" value="<?=$dados['cargo']?>"></p>
 
 
-	<h1>Formulario de alteração de funcionario</h1>
-
-	<form method="POST" action="index.php?r=cadastro/funcionario&p=alterar" name="AlterarUsuario">
-
-		<p>funcionario :</p>
-		<p><input type="text" maxlength="20" name="txtUsuario" value="<?=$dados['cargo']?>"></p>
+        		<select name="cargo" id="cargo">
+        			<option>Default</option>
+                </select>
 
 
-		<select name="cargo" id="cargo">
-			<option>Default</option>
-        </select>
+                <select name="empresa" id="empresa">
+        			<option>Default</option>
+                </select>
 
-
-        <select name="empresa" id="empresa">
-			<option>Default</option>
-        </select>
-
-		<input type="submit" name="Cadastrar funcionario">
-		<input type="hidden" name="frmAlterarUsuario" value="<?=$dados['codigo']?>">
-	</form>
+        		<input type="submit" name="Cadastrar funcionario">
+        		<input type="hidden" name="frmAlterarUsuario" value="<?=$dados['codigo']?>">
+        	</form>
+        </div>
+      </div>
+    </section>
+  </div>
 	<!-- INICIO DE RODAPÉ -->
 	   <?php require_once "/layout/footer.php";?>
    <!-- INICIO DE RODAPÉ <--></-->

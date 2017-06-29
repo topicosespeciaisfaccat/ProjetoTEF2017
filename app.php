@@ -5,6 +5,11 @@ $db_user = "b92b3058bbebc1";
 $db_pass = "f582640e";
 $db_name = "meuazuresql";
 
+/*$db_host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "meuazuresql";*/
+
 $conexao = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 if (mysqli_connect_errno($conexao)) {

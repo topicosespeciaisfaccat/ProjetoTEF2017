@@ -6,56 +6,63 @@
 	<link rel="stylesheet" type="text/css" href="layout/css/estilo.css">
     <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="./js/funcionario.js"></script>
+<<<<<<< HEAD
+=======
+    <script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.min.js"></script>
+
+>>>>>>> a0c68b1018ebf46f30afb2076104e42d80dc77fd
 
 </head>
 <body class="center clearfix">
  <!-- INICIO DE CABEÇALHO -->
-
-
-
-    <header>
-      <h1><a href="dashboard/index.php" title="Sistema de bonificação de postos"><span></span></a></h1>
-        <nav>
-            <ul>
-                <li><a href="#">contato</a></li>
-            </ul>
-        </nav><!-- fim nav -->
-    </header><!-- fim header -->
+<?php require_once "./layout/header.php";?>
     <!-- FIM DE CABEÇALHO -->
 
- <div id="mensagem">
+    <div class="conteudo">
+        <section>
+            <div class="home">  
+                <div class="wrapperform">  
 
-        </div>
+                   <div id="mensagem">
 
-	<h1>Formulario de cadastro de usuario</h1>
+                          </div>
 
-	<form method="POST" action="index.php?r=cadastro/funcionario&p=cadastrar">
+                  	<h1>Formulario de cadastro de Funcionário</h1>
 
-		<p>Nome do usuario :</p>
-		<div class="frmSearch">
-            <input type="text" id="search-box" placeholder="Country Name" />
-            <div id="suggesstion-box"></div>
-        </div>
+                  	<form method="POST" action="index.php?r=cadastro/funcionario&p=cadastrar">
 
-		<select name="usuario" id="usuario">
-			<option>Default</option>
-        </select>
+                  		<p>Nome do usuario :</p>
 
-		<select name="cargo" id="cargo">
-			<option>Default</option>
-        </select>
+                         <div id="container">
+                               <input type="text" id="search" placeholder="Search Tutorials Here... Ex: Java, Php, Jquery..."/>
+                               <input type="button" id="button" value="Search" />
+                               <ul id="result"></ul>
+                          </div>
+
+                  		<select name="usuario" id="usuario">
+                  			<option>Default</option>
+                          </select>
+
+                  		<select name="cargo" id="cargo">
+                  			<option>Default</option>
+                          </select>
 
 
-        <select name="empresa" id="empresa">
-			<option>Default</option>
-        </select>
+                          <select name="empresa" id="empresa">
+                  			<option>Default</option>
+                          </select>
 
 
-		<input type="submit" name="Cadastrar funcionario">
-		<input type="hidden" name="formularioCadastroFuncionario">
-	</form>
+                  		<input type="submit" name="Cadastrar funcionario" Value="Cadastrar">
+                  		<input type="hidden" name="formularioCadastroFuncionario">
+                  	</form>
+                  </div>
+                </div>
+              </section>
+            </div>
+
 	<!-- INICIO DE RODAPÉ -->
-	   <?php require_once "/layout/footer.php";?>
+	  <?php require_once "./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ <--></-->
 </body>
 </html>
