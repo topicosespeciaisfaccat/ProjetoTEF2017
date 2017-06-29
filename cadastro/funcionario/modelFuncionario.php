@@ -55,7 +55,7 @@ function _cadastrarFuncionario($conexao, $cargo_id, $empresa_id, $usuario_cpf) {
 	$sql = sprintf("INSERT INTO funcionario(id,cargo_id,Empresa_id,Usuario_cpf)
 		                 VALUES (NULL,%s,%s,%s)", $cargo_id, $empresa_id, $usuario_cpf);
 
-	//var_dump($sql);
+	var_dump($sql);
 	$resultado = mysqli_query($conexao, $sql);
 
 	return $resultado;

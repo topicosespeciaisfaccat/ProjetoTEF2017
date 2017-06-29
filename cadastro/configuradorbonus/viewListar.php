@@ -54,7 +54,7 @@
 						<?php }?>
 					</table>
 					<div class="linkbotao">
-					<a href="/ProjetoTEF2017/index.php?r=cadastro/configuradorbonus&p=cadastrar"> Cadastrar novo usuario</a>
+					<a href="/ProjetoTEF2017/index.php?r=cadastro/configuradorbonus &p=cadastrar"> Cadastrar novo usuario</a>
 					</div>
 				</div>
 			</div>

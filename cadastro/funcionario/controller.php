@@ -170,7 +170,7 @@ function excluirFuncionario($conexao) {
 
 function cadastrarFuncionario($conexao) {
 
-	var_dump($_POST['formularioCadastroFuncionario']);
+	//var_dump($_POST['formularioCadastroFuncionario']);
 	//verificar se o formulario foi postado
 	if (isset($_POST['formularioCadastroFuncionario'])) {
 		//O formulario foi postado
