@@ -15,10 +15,10 @@ function _excluirUsuario($conexao, $codigo) {
 	return $resultado;
 }
 
-function _cadastrarEmpresa($conexao, $id, $nome, $idgrupoempresa) {
+function _cadastrarEmpresa($conexao, $nome, $idgrupoempresa) {
 
-	$sql = sprintf("INSERT INTO empresa(id,descricao,GrupoEmpresa_id)
-		                 VALUES (%s,'%s','%s')", $id, $nome, $idgrupoempresa);
+	$sql = "INSERT INTO empresa (id, descricao, GrupoEmpresa_id)
+		                 VALUES (NULL,'$nome','$idgrupoempresa')";
 	$resultado = mysqli_query($conexao, $sql);
 
 	return $resultado;

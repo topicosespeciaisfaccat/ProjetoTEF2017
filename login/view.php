@@ -8,7 +8,7 @@
 <body class="center clearfix">
     <!-- INICIO DE CABEÇALHO -->
 	    <!-- INICIO DE CABEÇALHO -->
-		<?php require_once "./layout/header.php";?>
+		<?php require "./layout/header.php";?>
     <!-- FIM DE CABEÇALHO -->
 
 
@@ -44,7 +44,7 @@
 
 
  	<!-- INICIO DE RODAPÉ -->
-		<?php require_once "./layout/footer.php";?>
+		<?php require "./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ -->
 </body>
 </html>

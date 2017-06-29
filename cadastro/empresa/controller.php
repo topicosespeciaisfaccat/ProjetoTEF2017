@@ -101,14 +101,15 @@ function cadastrarEmpresa($conexao) {
 	//verificar se o formulario foi postado
 	if (isset($_POST['formularioCadastroEmpresa'])) {
 		//O formulario foi postado
-		$id = $_POST['txtId'];
+		//$id = $_POST['txtId'];
 		$nome = $_POST['txtNome'];
 		$idgrupoempresa = $_POST['idgrupoempresa'];
 
-		if (_cadastrarEmpresa($conexao, $id, $nome, $idgrupoempresa)) {
+		if (_cadastrarEmpresa($conexao, $nome, $idgrupoempresa)) {
 			$retornoExc = "Empresa ".$nome." cadastrada com sucesso!";
 			//$dados = listarEmpresa($conexao);
 			require "viewDashEmpresa.php";
+
 		} else {
 			echo "o cadastro falhou";
 			require "viewDashEmpresa.php";

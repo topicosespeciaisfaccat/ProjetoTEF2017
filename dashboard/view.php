@@ -26,7 +26,7 @@
 </head>
 <body class="center clearfix">
     <!-- INICIO DE CABEÇALHO -->
-		<?php require_once "./layout/header.php";?>
+		<?php include "./layout/header.php";?>
     <!-- FIM DE CABEÇALHO -->
 
 
@@ -41,7 +41,7 @@
 			 <div class="wrapper">
 	       		<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">
-					<input type="submit" class="Dashboard" name="Empresa" value="empresa" />
+					<input type="submit" class="Dashboard" name="Empresa" value="Empresa" />
 					</div></h3>
 				</div>
 
@@ -71,7 +71,7 @@
 
 
  	<!-- INICIO DE RODAPÉ -->
-		<?php require_once "./layout/footer.php";?>
+		<?php include "./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ -->
 </body>
 </html>

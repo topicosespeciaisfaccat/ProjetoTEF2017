@@ -47,7 +47,7 @@
 
 
  	<!-- INICIO DE RODAPÉ -->
-		<?php require_once "/layout/footer.php";?>
+		<?php require_once "layout/footer.php";?>
    <!-- INICIO DE RODAPÉ -->
 </body>
 </html>

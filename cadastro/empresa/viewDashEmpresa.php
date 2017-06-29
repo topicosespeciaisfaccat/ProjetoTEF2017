@@ -18,7 +18,7 @@
 
 		<?php }?>
 		<section class="chamada" >
-			 <div class="wrapper">
+			<div class="wrapper">
 
 				<div style="float: left; width:30%; height:30%; background: #00aaaa;  border: 2px; border-radius: 9px; margin:0;margin-left:4%;	padding:20px;">
 					<h3><div class="inner-dash">

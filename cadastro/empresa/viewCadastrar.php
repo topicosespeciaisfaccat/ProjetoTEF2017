@@ -14,8 +14,8 @@
 	<h1>Formulario de cadastro de empresa</h1>
 
 	<form method="POST" action="index.php?r=cadastro/empresa&p=btncadastrar">
-		<p>ID da Empresa:</p>
-		<p><input type="text" maxlength="11" minlength="1" name="txtId"></p>
+		<!--<p>ID da Empresa:</p>
+		<p><input type="text" maxlength="11" minlength="1" name="txtId"></p>-->
 		<p>Nome da Empresa:</p>
 		<p><input type="text" maxlength="11" minlength="1" name="txtNome"></p>
 		<p>Empresa do Grupo :</p>

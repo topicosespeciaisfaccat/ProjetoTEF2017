@@ -42,7 +42,7 @@
 
 		<?php }?>
 	</table>
-	<a href="/ProjetoTEF2017/index.php?r=cadastro/empresa&p=cadastrar"> Cadastrar nova empresa</a>
+	<a href="./index.php?r=cadastro/empresa&p=cadastrar"> Cadastrar nova empresa</a>
 
 	<!-- INICIO DE RODAPÉ -->
 	   <?php require"./layout/footer.php";?>
