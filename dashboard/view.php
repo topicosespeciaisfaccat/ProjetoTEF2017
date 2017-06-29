@@ -25,7 +25,7 @@
 
 				<?php }?>
 
-		<section class="chamada" >
+				
 					 <div class="wrapperadmin">
 			       		<div>
 							<h3><div class="inner-dash">

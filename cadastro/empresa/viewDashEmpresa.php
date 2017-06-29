@@ -21,7 +21,7 @@
 			<h1><?=$retornoExc?></h1>
 
 		<?php }?>
-		<section class="chamada" >
+		
 			 <div class="wrapperadmin">
 				<div>
 					<h3><div class="inner-dash">
@@ -41,7 +41,7 @@
 					<input type="hidden" name="formularioDashboard">
 					</div> </h3>
 				</div>
-<<<<<<< HEAD
+
 				<div>
 					<h3>
 						 <input type="submit" class="Dashboard" name="Pesquisar" value="Pesquisar">
@@ -50,11 +50,9 @@
 					</h3>
 				</div>
 
-=======
-				
->>>>>>> a0c68b1018ebf46f30afb2076104e42d80dc77fd
+
 			</div>
-		</section>
+		
 	</form>
 
 </div>

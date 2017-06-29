@@ -6,11 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="layout/css/estilo.css">
     <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="./js/funcionario.js"></script>
-<<<<<<< HEAD
 =======
     <script type="text/javascript" src="./js/jquery-ui-1.10.3.custom.min.js"></script>
 
->>>>>>> a0c68b1018ebf46f30afb2076104e42d80dc77fd
+
 
 </head>
 <body class="center clearfix">
