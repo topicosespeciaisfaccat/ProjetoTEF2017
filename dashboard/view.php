@@ -11,7 +11,7 @@
 </head>
 <body class="center clearfix">
     <!-- INICIO DE CABEÇALHO -->
-		<?php require_once "./layout/header.php";?>
+		<?php include "./layout/header.php";?>
     <!-- FIM DE CABEÇALHO -->
 		<div class="conteudo">
 			<section>
@@ -25,6 +25,7 @@
 
 				<?php }?>
 
+		<section class="chamada" >
 					 <div class="wrapperadmin">
 			       		<div>
 							<h3><div class="inner-dash">
@@ -59,7 +60,7 @@
 
 
  	<!-- INICIO DE RODAPÉ -->
-		<?php require_once "./layout/footer.php";?>
+		<?php include "./layout/footer.php";?>
    <!-- INICIO DE RODAPÉ -->
 </body>
 </html>

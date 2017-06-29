@@ -1,7 +1,7 @@
 <?php
-$db_host = "br-cdbr-azure-south-b.cloudapp.net";
-$db_user = "b92b3058bbebc1";
-$db_pass = "f582640e";
+$db_host = "localhost";
+$db_user = "root";
+$db_pass = "";
 $db_name = "meuazuresql";
 
 /*$db_host = "localhost";

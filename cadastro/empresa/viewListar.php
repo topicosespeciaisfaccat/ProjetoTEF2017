@@ -33,7 +33,9 @@
 								<td>Id</td>
 								<td>Empresa</td>
 								<td>Grupo Empresa</td>
-								<td>--</td>
+								<td>Excluir</td>
+
+
 							</tr>
 							<?php foreach ($dadosempresa as $linha) {?>
 							<tr class="dadostabela">
@@ -43,6 +45,7 @@
 
 
 								<td class="excluirtabela"><a href="index.php?r=cadastro/empresa&p=excluir&codigo=<?=$linha["id"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
+						
 							</tr>
 
 							<?php }?>

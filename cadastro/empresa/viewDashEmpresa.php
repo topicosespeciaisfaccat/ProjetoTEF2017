@@ -21,8 +21,8 @@
 			<h1><?=$retornoExc?></h1>
 
 		<?php }?>
+		<section class="chamada" >
 			 <div class="wrapperadmin">
-
 				<div>
 					<h3><div class="inner-dash">
 					<input type="submit" class="Dashboard" name="CadastroEmpresa" value="Cadastro Empresa" >

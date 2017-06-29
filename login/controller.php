@@ -27,12 +27,12 @@ function obtemUsuario($conexao) {
 				setcookie("usuario", $row[2], time() + 3600); /*Uma hora de cookie */
 				setcookie("tipoUsuario", $row[3], time() + 3600);
 
-				header("Location: /ProjetoTEF2017/index.php?r=dashboard");
+				header("Location: ./index.php?r=dashboard");
 
 			} else {
 
 				$retornoExc = "Usuario não tem acesso de administrador!" . printf($data["tipo"]);
-				header("Location: /ProjetoTEF2017/acessoNegado.php");
+				header("Location: ./acessoNegado.php");
 			}
 
 		} else {
