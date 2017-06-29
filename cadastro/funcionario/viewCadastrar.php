@@ -2,7 +2,7 @@
 <html>
 <head>
   	<meta charset="utf-8">
-	<title><?=$titulo?></title>
+	<title>cadastro de funcionario</title>
 	<link rel="stylesheet" type="text/css" href="layout/css/estilo.css">
     <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="./js/funcionario.js"></script>
@@ -17,40 +17,43 @@
 
     <div class="conteudo">
         <section>
-            <div class="home">  
-                <div class="wrapperform">  
+            <div class="home">
+                <div class="wrapperform">
 
                    <div id="mensagem">
 
-                          </div>
+                    </div>
 
                   	<h1>Formulario de cadastro de Funcionário</h1>
 
-                  	<form method="POST" action="index.php?r=cadastro/funcionario&p=cadastrar">
+                  	<form method="POST" action="index.php?r=cadastro/funcionario&p=cadastrar" >
 
-                  		<p>Nome do usuario :</p>
+                  		<!--<p>Nome do usuario :</p>
 
                          <div id="container">
-                               <input type="text" id="search" placeholder="Search Tutorials Here... Ex: Java, Php, Jquery..."/>
-                               <input type="button" id="button" value="Search" />
+                               <input type="text" id="search" placeholder="Informe um nome para pesquisa"/>
+                               <input type="button" id="button" value="Pesquisar" />
                                <ul id="result"></ul>
-                          </div>
+                          </div>-->
 
                   		<select name="usuario" id="usuario">
-                  			<option>Default</option>
+                  			<option>Usuario</option>
                           </select>
 
+                      <!--<input type="text=" name="usuario" disabled="true" style="width: 200px">-->
+
                   		<select name="cargo" id="cargo">
-                  			<option>Default</option>
+                  			<option>Cargo</option>
                           </select>
 
 
                           <select name="empresa" id="empresa">
-                  			<option>Default</option>
+                  			<option>Empresa</option>
                           </select>
 
 
-                  		<input type="submit" name="Cadastrar funcionario">
+                  		<input type="submit" name="Cadastrarfuncionario" value="Cadastrar funcionario">
+
                   		<input type="hidden" name="formularioCadastroFuncionario">
                   	</form>
                   </div>

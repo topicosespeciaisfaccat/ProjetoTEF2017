@@ -30,7 +30,7 @@ case "cadastrar":
 case "excluir":
 
 	$retornoExc = excluirFuncionario($conexao);
-	$dados = listarFuncionario($conexao);
+	$dados = _listarFuncionario($conexao);
 	require "viewListar.php";
 	break;
 
@@ -45,6 +45,27 @@ default:
 	require "viewListar.php";
 	break;
 }
+
+/*function cadastrarFuncionario($conexao) {
+if (isset($_POST['formularioCadastroFuncionario'])) {
+
+$usuario = $_POST['usuario'];
+$cargo = $_POST['cargo'];
+$empresa = $_POST['empresa'];
+
+$resultado = _cadastrarFuncionario($conexao, $usuario, $cargo, $empresa);
+if (!$resultado) {
+echo "Falha ao cadastrar funcionario ";
+return false;
+} else {
+
+$retornoExc = "Usuario alterado com sucesso!";
+
+require "viewListar.php";
+}
+}
+
+}*/
 
 function listarUsuario($conexao) {
 	$resultado = _listaFuncionario($conexao);
@@ -103,12 +124,11 @@ function alterarFuncionario($conexao) {
 
 	if (isset($_POST['frmAlterarUsuario'])) {
 
-		$cpf = $_POST['frmAlterarUsuario'];
-		$nome = $_POST['txtNome'];
-		$senha = $_POST['txtSenha'];
-		$tipo = $_POST['txtTipo'];
+		$codigo = $_POST['frmAlterarUsuario'];
+		$cargo = $_POST['cargo'];
+		$empresa = $_POST['empresa'];
 
-		$resultado = _alterarFuncionarioPorCodigo($conexao, $cpf, $nome, $senha, $tipo);
+		$resultado = _alterarFuncionarioPorCodigo($conexao, $cargo, $empresa, $codigo);
 
 		if (!$resultado) {
 			echo "Falha ao alterar Funcionario, cfp :" . $cpf;
@@ -116,7 +136,7 @@ function alterarFuncionario($conexao) {
 		} else {
 
 			$retornoExc = "Funcionario alterado com sucesso!";
-			$dados = listarFuncionario($conexao);
+			$dados = _listarFuncionario($conexao);
 			require "viewListar.php";
 		}
 
@@ -135,11 +155,11 @@ function alterarFuncionario($conexao) {
 
 }
 
-function excluirUsuario($conexao) {
+function excluirFuncionario($conexao) {
 
 	$codigo = (isset($_GET["codigo"])) ? $_GET["codigo"] : -1;
 
-	$resultado = _excluirUsuario($conexao, $codigo);
+	$resultado = _excluirFuncionario($conexao, $codigo);
 
 	if ($resultado) {
 		return "Exclusão efetuada com sucesso!";
@@ -149,26 +169,29 @@ function excluirUsuario($conexao) {
 }
 
 function cadastrarFuncionario($conexao) {
-	$titulo = "Cadastrar usuario";
-	//verificar se o formulario foi postado
-	if (isset($_POST['formularioCadastroUsuario'])) {
-		//O formulario foi postado
-		$cpf = $_POST['txtCpf'];
-		$nome = $_POST['txtNome'];
-		$email = $_POST['txtEmail'];
-		$senha = $_POST['txtSenha'];
-		$tipo = $_POST['txtTipo'];
 
-		if (_cadastrarUsuario($conexao, $cpf, $nome, $email, $senha, $tipo)) {
-			$retornoExc = "Usuario cadastrado com sucesso!";
-			$dados = listarUsuario($conexao);
+	var_dump($_POST['formularioCadastroFuncionario']);
+	//verificar se o formulario foi postado
+	if (isset($_POST['formularioCadastroFuncionario'])) {
+		//O formulario foi postado
+		$usuario = $_POST['usuario'];
+		$cargo = $_POST['cargo'];
+		$empresa = $_POST['empresa'];
+		$retorno = _cadastrarFuncionario($conexao, $cargo, $empresa, $usuario);
+
+		//var_dump($retorno);
+
+		if ($retorno) {
+			$dados = _listarFuncionario($conexao);
 			require "viewListar.php";
 		} else {
 			echo "o cadastro falhou";
-			require "viewCadastrar.php";
+			$dados = _listarFuncionario($conexao);
+			require "viewListar.php";
 		}
 
 	} else {
+
 		require "viewCadastrar.php";
 	}
 }

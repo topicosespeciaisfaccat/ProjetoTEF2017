@@ -2,9 +2,10 @@
 
 	$(document).ready(function(){
 
+			obterUsuario ();
 			obterCargo();
 			obterEmpresa();
-			search();
+			/*search();
 			
 			$("#button").click(function(){
 			 search();
@@ -14,12 +15,37 @@
 			if(e.keyCode == 13) {
 			search();
 			}
-			});
+			});*/
+	
 
-	});
+});
 
 })(jQuery);
 
+function obterUsuario (){
+	$.ajax({
+				url:"cadastro/funcionario/funcoes.php",
+				datatype : 'json',
+				type : 'POST',
+				data : {funcao : 'obterUsuarioSolicitacao'},
+				success: function(data){			    
+	                // Parse the returned json data
+	                var opts = $.parseJSON(data);
+	                // Use jQuery's each to iterate over the opts value
+	                $.each(opts, function(i, d) {
+	                    // You will need to alter the below to get the right values from your json object.  Guessing that d.id / d.modelName are columns in your carModels data
+	                    $('#usuario').append('<option value="' + d.cpf + '">' + d.nome + '</option>');
+	                });
+				},
+				error :function(data) {
+					console.log("ola mundo erro");
+				},
+				complete : function(){
+					console.log("ola mundo completo");
+				}
+
+			});
+}
 
 function obterEmpresa (){
 	$.ajax({
@@ -27,24 +53,15 @@ function obterEmpresa (){
 				datatype : 'json',
 				type : 'POST',
 				data : {funcao : 'obterEmpresaSolicitacao'},
-				 success: function(data){
-			    
-                                // Parse the returned json data
-                var opts = $.parseJSON(data);
+				success: function(data){
+	                // Parse the returned json data
+	                var opts = $.parseJSON(data);               
+	                // Use jQuery's each to iterate over the opts value
+	                $.each(opts, function(i, d) {
+	                    // You will need to alter the below to get the right values from your json object.  Guessing that d.id / d.modelName are columns in your carModels data
+	                    $('#empresa').append('<option value="' + d.id + '">' + d.empresa + '</option>');
 
-                 
-                // Use jQuery's each to iterate over the opts value
-                $.each(opts, function(i, d) {
-                    // You will need to alter the below to get the right values from your json object.  Guessing that d.id / d.modelName are columns in your carModels data
-                    $('#empresa').append('<option value="' + d.id + '">' + d.empresa + '</option>');
-
-
-                });
-
-
-             
-
-					
+	                });
 				},
 				error :function(data) {
 					console.log("ola mundo erro");
@@ -63,9 +80,9 @@ function obterCargo (){
 				datatype : 'json',
 				type : 'POST',
 				data : {funcao : 'obterCargoSolicitacao'},
-				 success: function(data){
+				success: function(data){
 			   
-                                // Parse the returned json data
+			    // Parse the returned json data
                 var opts = $.parseJSON(data);
                 // Use jQuery's each to iterate over the opts value
                 $.each(opts, function(i, d) {
@@ -73,10 +90,6 @@ function obterCargo (){
                     $('#cargo').append('<option value="' + d.id + '">' + d.cargo + '</option>');
                 });
 
-
-             
-
-					
 				},
 				error :function(data) {
 					console.log("ola mundo erro");
@@ -88,7 +101,8 @@ function obterCargo (){
 			});
 }
 
-function search(){
+
+/*function search(){
  
 	var title=$("#search").val();
 
@@ -105,5 +119,7 @@ function search(){
 	     }
 	  });
 	}
-}
+
+
+}*/
 

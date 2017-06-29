@@ -23,38 +23,50 @@ if (isset($_POST['funcao'])) {
 		_obterCargoSolicitacao($conexao);
 		break;
 	case "obterEmpresaSolicitacao":
-
 		_obterEmpresaSolicitacao($conexao);
 		break;
 
 	case "obterUsuarioSolicitacao":
-		$key = $_POST['key'];
-		_obterUsuario($conexao, $key);
+		_obterUsuarioSolicitacao($conexao);
 		break;
 	}
 }
 
-function _obterUsuario($conexao, $key) {
-	$sql = "SELECT cpf, nome from usuario  where nome like '" . $key . "%'  order by nome ";
+/*function _obterUsuario($conexao, $key) {
+$sql = "SELECT cpf, nome from usuario  where nome like '" . $key . "%'  order by nome ";
+$resultado = mysqli_query($conexao, $sql);
+$found = mysqli_num_rows($resultado);
+
+//$rows = array();
+
+//while ($temp = mysqli_fetch_assoc($resultado)) {		$rows[] = $temp;	}
+
+//https://agung-setiawan.com/how-to-create-ajax-search-using-php-jquery-and-mysql/
+
+if ($found > 0) {
+while ($row = mysqli_fetch_assoc($resultado)) {
+
+echo "<li>$row[nome]</br><a id='rPesquisa'>$row[cpf]</a></li>";
+}
+} else {
+echo "<li> Não encotrou informação! <li>";
+}
+
+//echo json_encode($rows);
+}*/
+
+function _obterUsuarioSolicitacao($conexao) {
+
+	$sql = sprintf("SELECT cpf, nome  from usuario order by nome; ");
 	$resultado = mysqli_query($conexao, $sql);
-	$found = mysqli_num_rows($resultado);
+	$rows = array();
 
-	//$rows = array();
-
-	//while ($temp = mysqli_fetch_assoc($resultado)) {		$rows[] = $temp;	}
-
-	//https://agung-setiawan.com/how-to-create-ajax-search-using-php-jquery-and-mysql/
-
-	if ($found > 0) {
-		while ($row = mysqli_fetch_assoc($resultado)) {
-
-			echo "<li>$row[nome]</br><a href=$row[cpf]>$row[cpf]</a></li>";
-		}
-	} else {
-		echo "<li>No Tutorial Found<li>";
+	while ($temp = mysqli_fetch_assoc($resultado)) {
+		$rows[] = $temp;
 	}
 
-	//echo json_encode($rows);
+	echo json_encode($rows);
+
 }
 
 function _obterCargoSolicitacao($conexao) {
