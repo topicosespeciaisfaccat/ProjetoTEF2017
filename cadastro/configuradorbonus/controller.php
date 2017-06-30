@@ -125,8 +125,8 @@ function cadastrarConfiguradorBonus($conexao) {
 		$nivelHorizontalMax = $_POST["txtNovelHorizontal"];
 		$nivelProfundidadeMax = $_POST["txtProfundidade"];
 		$empresa_id = $_POST["empresa"];
-		$dataInicial = $_POST[""];
-		$dataFinal = $_POST[""];
+		$dataInicial = $_POST["txtDataInicial"];
+		$dataFinal = $_POST["txtDataFinal"];
 		$status = $_POST["status"];
 
 		if (_cadastrarConfiguradorBonus($conexao, $descricao, $valor, $nivelHorizontalMax, $nivelProfundidadeMax, $empresa_id, $dataInicial, $dataFinal, $status)) {

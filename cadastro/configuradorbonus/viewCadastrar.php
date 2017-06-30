@@ -23,29 +23,29 @@
 
 					<form method="POST" action="index.php?r=cadastro/configuradorbonus&p=cadastrar">
 						<p>Descrição:</p>
-						<p><input type="text" maxlength="11" minlength="11" name="txtDescricao"></p>
+						<p><input type="text" maxlength="50" minlength="11" name="txtDescricao"></p>
 						<p>Valor:</p>
-						<p><input type="text" maxlength="200" name="txtValor"></p>
+						<p><input type="text" maxlength="20" name="txtValor"></p>
 						<p>Nivel horizontal:</p>
 						<p><input type="text" maxlength="200" name="txtNovelHorizontal"></p>
 						<p>Nivel Profundidade:</p>
 						<p><input type="text" maxlength="20" name="txtProfundidade"></p>
 						<p>Data Inicial:</p>
-						<p><input type="date"  max="1979-12-31"  min="2000-01-02"  name="txtDataInicial"></p>
+						<p><input type="date"  max="2099-12-31"  min="2017-01-02"  name="txtDataInicial"></p>
 						<p>Data Final:</p>
-						<p><input type="date"  max="1979-12-31"  min="2000-01-02"  name="txtDataFinal"></p>
+						<p><input type="date"  max="2099-12-31"  min="2017-01-02"  name="txtDataFinal"></p>
 						<p>Status:</p>
 						<p><select name="status" id="status">
 								<option value="0">Status</option>
 								<option value="0">Inativo</option>
 								<option value="1">Ativo</option>
 						</select></p>
-
+						<p>Empresa:</p>
 						<p><select name="empresa" id="empresa">
 								<option value="0">Empresa</option>
 						</select></p>
 
-						<input type="submit" name="Cadastrar usuario">
+						<input type="submit" name="CadastroConfiguradorBonus" value="Cadastrar usuario">
 						<input type="hidden" name="formularioCadastroConfiguradorBonus">
 					</form>
 			</div>

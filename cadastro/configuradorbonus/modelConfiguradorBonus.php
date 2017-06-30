@@ -49,14 +49,15 @@ function _cadastrarConfiguradorBonus($conexao, $descricao, $valor, $nivelHorizon
 							     dataInicial,
 							     dataFinal,
 							     status)
-					   VALUES (%s
+					   VALUES ('%s'
 					         , %s
 					         , %s
 					         , %s
 					         , %s
-					         , %s
-					         , %s
-					         , %s); ", $descricao, $valor, $nivelHorizontalMax, $nivelProfundidadeMax, $empresa_id, $dataInicial, $dataFinal);
+					         , '%s'
+					         , '%s'
+					         , %s); ", $descricao, $valor, $nivelHorizontalMax, $nivelProfundidadeMax, $empresa_id, $dataInicial, $dataFinal, $status);
+	//var_dump($sql);
 	$resultado = mysqli_query($conexao, $sql);
 	return $resultado;
 
