@@ -15,7 +15,7 @@
     <!-- FIM DE CABEÇALHO -->
 		<div class="conteudo">
 			<section>
-				<div class="home">			
+				<div class="home">
 
 
 	<!-- INICIO DE CORPO DO SITE -->
@@ -25,7 +25,7 @@
 
 				<?php }?>
 
-				
+
 					 <div class="wrapperadmin">
 			       		<div>
 							<h3><div class="inner-dash">
@@ -49,6 +49,11 @@
 						<div>
 							<h3> <div class="inner-dash">
 								<input type="submit" class="Dashboard" name="Vendas" value="Vendas" />
+							</div></h3>
+						</div>
+						<div>
+							<h3> <div class="inner-dash">
+								<input type="submit" class="Dashboard" name="ConfiguradorDeBonus" value="Configurador De Bonus" />
 							</div></h3>
 						</div>
 					</div>

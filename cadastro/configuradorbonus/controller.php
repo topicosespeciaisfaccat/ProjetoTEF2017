@@ -28,7 +28,7 @@ case "cadastrar":
 	break;
 case "excluir":
 
-	$retornoExc = excluirConfiguradorBonus($conexao);
+	$retornoExc = inativarConfiguradorBonus($conexao);
 	$dados = listarConfiguradorBonus($conexao);
 	require "viewListar.php";
 	break;
@@ -40,7 +40,7 @@ case "alterar":
 
 default:
 	# listar...
-	$dados = listarUsuario($conexao);
+	$dados = listarConfiguradorBonus($conexao);
 	require "viewListar.php";
 	break;
 }
@@ -49,7 +49,10 @@ function listarConfiguradorBonus($conexao) {
 	$resultado = _listaConfiguradorBonus($conexao);
 
 	$data = array();
-	$data = mysqli_fetch_assoc($resultado);	
+
+	while ($row = mysqli_fetch_array($resultado)) {
+		$data[] = array("codigo" => $row["codigo"], "descricao" => $row["descricao"], "valor" => $row["valor"], "nivelHorizontalMax" => $row["nivelHorizontalMax"], "nivelProfundidadeMax" => $row["nivelProfundidadeMax"], "empresa" => $row["empresa"], "status" => $row["status"]);
+	}
 
 	return $data;
 
@@ -60,15 +63,15 @@ function alterarConfiguradorBonus($conexao) {
 	if (isset($_POST['frmAlterarConfiguradorBonus'])) {
 
 		$cpf = $_POST['frmAlterarConfiguradorBonus'];
-		
+
 		//$nome = $_POST['txtNome'];
 		//$senha = $_POST['txtSenha'];
 		//$tipo = $_POST['txtTipo'];
 
-		$resultado = _alterarConfiguradorBonusPorCodigo($conexao, $);
+		//$resultado = _alterarConfiguradorBonusPorCodigo($conexao, $);
 
 		if (!$resultado) {
-			echo "Falha ao alterar usuario, cfp :" . $cpf;
+			echo "Falha ao alterar usuario, cfp :";
 			return false;
 		} else {
 
@@ -95,11 +98,17 @@ function alterarConfiguradorBonus($conexao) {
 function inativarConfiguradorBonus($conexao) {
 
 	$codigo = (isset($_GET["codigo"])) ? $_GET["codigo"] : -1;
+	$status = (isset($_GET["status"])) ? $_GET["status"] : -1;
+	if ($status == "1") {
+		$vStatus = "0";
+	} else {
+		$vStatus = "1";
+	}
 
-	$resultado = _inativarConfiguradorBonus($conexao, $codigo);
+	$resultado = _inativarConfiguradorBonus($conexao, $vStatus, $codigo);
 
 	if ($resultado) {
-		return "Exclusão efetuada com sucesso!";
+		return "alteração de status efetuada com sucesso!";
 	} else {
 		return "";
 	}
@@ -110,9 +119,17 @@ function cadastrarConfiguradorBonus($conexao) {
 	//verificar se o formulario foi postado
 	if (isset($_POST['formularioCadastroConfiguradorBonus'])) {
 		//O formulario foi postado
-		//
 
-		if (_cadastrarConfiguradorBonus($conexao, $)) {
+		$descricao = $_POST["txtDescricao"];
+		$valor = $_POST["txtValor"];
+		$nivelHorizontalMax = $_POST["txtNovelHorizontal"];
+		$nivelProfundidadeMax = $_POST["txtProfundidade"];
+		$empresa_id = $_POST["empresa"];
+		$dataInicial = $_POST[""];
+		$dataFinal = $_POST[""];
+		$status = $_POST["status"];
+
+		if (_cadastrarConfiguradorBonus($conexao, $descricao, $valor, $nivelHorizontalMax, $nivelProfundidadeMax, $empresa_id, $dataInicial, $dataFinal, $status)) {
 			$retornoExc = "Usuario cadastrado com sucesso!";
 			$dados = listarConfiguradorBonus($conexao);
 			require "viewListar.php";

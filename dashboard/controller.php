@@ -16,7 +16,7 @@ function get_post_action($name) {
 }
 
 if (isset($_POST['formularioDashboard'])) {
-	switch (get_post_action('Empresa', 'Usuario', 'Funcionario')) {
+	switch (get_post_action('Empresa', 'Usuario', 'Funcionario', 'ConfiguradorDeBonus')) {
 	case 'Empresa':
 		header("Location: /ProjetoTEF2017/index.php?r=cadastro/empresa&p=dashempresa");
 		break;
@@ -28,7 +28,9 @@ if (isset($_POST['formularioDashboard'])) {
 	case 'Funcionario':
 		header("Location: /ProjetoTEF2017/index.php?r=cadastro/funcionario");
 		break;
-
+	case 'ConfiguradorDeBonus':
+		header("Location: /ProjetoTEF2017/index.php?r=cadastro/configuradorbonus");
+		break;
 	default:
 //no action sent
 	}

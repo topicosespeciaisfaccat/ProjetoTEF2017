@@ -37,24 +37,27 @@
 							<td>Nivel Profundidade Max</td>
 							<td>empresa</td>
 							<td>Status</td>
+							<td>------</td>
+							<td>------</td>
 						</tr>
 						<?php foreach ($dados as $linha) {?>
 						<tr class="dadostabela">
 							<td><?=$linha["codigo"]?> </td>
 							<td><?=$linha["descricao"]?> </td>
+							<td><?=$linha["valor"]?> </td>
 							<td><?=$linha["nivelHorizontalMax"]?> </td>
 							<td><?=$linha["nivelProfundidadeMax"]?> </td>
 						    <td><?=$linha["empresa"]?> </td>
 						    <td><?=$linha["status"]?> </td>
 
-							<td class="excluirtabela"><a href="index.php?r=cadastro/configuradorbonus&p=excluir&codigo=<?=$linha["cpf"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
-							<td class="excluirtabela"><a href="index.php?r=cadastro/configuradorbonus&p=alterar&codigo=<?=$linha["cpf"]?>">Alterar</a></td>
+							<td class="excluirtabela"><a href="index.php?r=cadastro/configuradorbonus&p=excluir&codigo=<?=$linha["codigo"]?>&status=<?=$linha["status"]?>" onclick="return confirm('Deseja realmente alterar o status o registro?')">Inativar/Ativar</a></td>
+							<td class="excluirtabela"><a href="index.php?r=cadastro/configuradorbonus&p=alterar&codigo=<?=$linha["codigo"]?>">Alterar</a></td>
 						</tr>
 
 						<?php }?>
 					</table>
 					<div class="linkbotao">
-					<a href="/ProjetoTEF2017/index.php?r=cadastro/configuradorbonus &p=cadastrar"> Cadastrar novo usuario</a>
+					<a href="/ProjetoTEF2017/index.php?r=cadastro/configuradorbonus &p=cadastrar"> Cadastrar novo bonus</a>
 					</div>
 				</div>
 			</div>
