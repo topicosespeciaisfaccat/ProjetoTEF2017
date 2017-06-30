@@ -58,7 +58,12 @@ body{
     bottom: -17px; 
 
 }
-
+.bonusclientes{
+    position: relative; 
+    clear: both;    
+    text-align: center;
+    width: 100%;
+}
 
 /*cabeçalho*/
 /*logo*/
@@ -163,6 +168,10 @@ li a:hover:not(.active) {
 }
 .wrapper h3{
     color: white;
+}
+.wrapper h1, h2{
+        color: black;
+        text-align: center;
 }
 .email{
     clear: both;
