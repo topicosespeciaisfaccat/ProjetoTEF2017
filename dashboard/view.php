@@ -53,7 +53,7 @@
 						</div>
 						<div>
 							<h3> <div class="inner-dash">
-								<input type="submit" class="Dashboard" name="ConfiguradorDeBonus" value="Configurador De Bonus" />
+								<input type="submit" class="Dashboard" name="ConfiguradorDeBonus" value="Config Bonus" />
 							</div></h3>
 						</div>
 					</div>
