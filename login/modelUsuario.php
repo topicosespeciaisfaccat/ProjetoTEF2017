@@ -6,7 +6,7 @@ function _obterUsuario($conexao, $email, $senha) {
 	         join tipoUsuario on usuario.tipoUsuario_id = tipoUsuario.id
 	         where usuario.email ='%s'
 	           and usuario.senha ='%s'", $email, $senha);
-
+	var_dump($sql);
 	$resultado = mysqli_query($conexao, $sql);
 
 	return $resultado;

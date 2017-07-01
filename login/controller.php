@@ -1,7 +1,6 @@
 <?php
 $titulo = "Login indica bonus";
 
-
 require "modelUsuario.php";
 
 if (isset($_POST['formularioLogin'])) {
@@ -19,7 +18,7 @@ function obtemUsuario($conexao) {
 
 			$resultado = _obterUsuario($conexao, $email, $senha);
 			$data = array();
-
+			var_dump($resultado);
 			$row = $resultado->fetch_array(MYSQLI_NUM);
 
 			if (isset($row[3]) && $row[3] == "Administrador") {
