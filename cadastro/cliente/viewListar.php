@@ -16,7 +16,7 @@
 
 					<?php if (isset($_COOKIE['usuario'])) {?>
 
-						<h1>Bem vindo <?=$_COOKIE['usuario']?>, abaixo listagem de venda :</h1>
+						<h1>Bem vindo <?=$_COOKIE['usuario']?>, abaixo listagem de cliente :</h1>
 
 					<?php }?>
 
@@ -45,14 +45,14 @@
 							<td><?=$linha["tipo"]?> </td>
 
 
-							<td class="excluirtabela"><a href="index.php?r=cadastro/venda&p=excluir&codigo=<?=$linha["cpf"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
-							<td class="excluirtabela"><a href="index.php?r=cadastro/venda&p=alterar&codigo=<?=$linha["cpf"]?>">Alterar</a></td>
+							<td class="excluirtabela"><a href="index.php?r=cadastro/cliente&p=excluir&codigo=<?=$linha["cpf"]?>" onclick="return confirm('Deseja realmente excluir o registro?')">Excluir</a></td>
+							<td class="excluirtabela"><a href="index.php?r=cadastro/cliente&p=alterar&codigo=<?=$linha["cpf"]?>">Alterar</a></td>
 						</tr>
 
 						<?php }?>
 					</table>
 					<div class="linkbotao">
-					<a href="/ProjetoTEF2017/index.php?r=cadastro/venda&p=cadastrar"> Cadastrar novo usuario</a>
+					<a href="/ProjetoTEF2017/index.php?r=cadastro/cliente&p=cadastrar"> Cadastrar novo cliente</a>
 					</div>
 				</div>
 			</div>

@@ -36,21 +36,9 @@ default:
 	break;
 }
 
-function cadastrarVenda($conexao) {
+function cadastrarVendaProduto($conexao) {
 
-	if (isset($_POST['formularioCadastroVenda'])) {
-
-	} else {
-
-		$dados = listarVenda($conxao);
-		require "viewListar.php";
-	}
-
-}
-
-function alterarVenda($conexao) {
-
-	if (isset($_POST['formularioCadastroVenda'])) {
+	if (isset($_POST['formularioCadastroVendaProduto'])) {
 
 	} else {
 
@@ -60,13 +48,24 @@ function alterarVenda($conexao) {
 
 }
 
-function exlcuirVenda($conexao){
+function alterarVendaProduto($conexao) {
 
-	isset($_GET['codigo']){
-		
+	if (isset($_POST['formularioCadastroVendaProduto'])) {
+
+	} else {
+
+		$dados = listarVenda($conxao);
+		require "viewListar.php";
+	}
+
+}
+
+function excluirVendaProduto($conexao) {
+	if (isset($_GET['codigo'])) {
+
 	}
 }
 
-function listaVenda($conexao) {
+function listaVendaProduto($conexao) {
 
 }
